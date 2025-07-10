@@ -57,19 +57,19 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bul/ | job/dʒɒb/J?b/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fi?/ | coffee/kɒfi/k?fi/ | leaf/liːf/lEf/ |
 | h | h | H sound | 1.40% | house/haʊs/h?s/ | perhaps/pərhæps/purh?ps/ | hello/heləʊ/helu?/ |
-| ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
-| ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/w?Si?/ | fish/fɪʃ/fiS/ |
+| ŋ | G | NG sound | 0.99% | sing/sɪŋ/siG/ | thinking/θɪŋkɪŋ/QiGkiG/ | long/lɒŋ/l?G/ |
+| ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/w?SiG/ | fish/fɪʃ/fiS/ |
 | j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mj?zik/ | few/fjuː/fj?/ |
-| g |  | G sound | 0.80% | go/gəʊ/?/ | bigger/bɪgər/?/ | bag/bæg/?/ |
+| g | g | G sound | 0.80% | go/gəʊ/g?/ | bigger/bɪgər/bigu?/ | bag/bæg/b?g/ |
 | dʒ | J | J sound | 0.59% | jump/dʒʌmp/J?mp/ | magic/mædʒɪk/m?Jik/ | bridge/brɪdʒ/briJ/ |
-| tʃ |  | CH sound | 0.56% | chair/tʃeər/?/ | teacher/tiːtʃər/?/ | watch/wɒtʃ/?/ |
-| θ |  | TH (thin) | 0.41% | think/θɪŋk/?/ | nothing/nʌθɪŋ/?/ | path/pɑːθ/?/ |
-| ʒ |  | ZH sound | 0.07% | pleasure/pleʒər/?/ | vision/vɪʒən/?/ | beige/beɪʒ/?/ |
+| tʃ | c | CH sound | 0.56% | chair/tʃeər/ce?/ | teacher/tiːtʃər/tEcu?/ | watch/wɒtʃ/w?c/ |
+| θ | Q | TH (thin) | 0.41% | think/θɪŋk/QiGk/ | nothing/nʌθɪŋ/n?QiG/ | path/pɑːθ/p?Q/ |
+| ʒ | Z | ZH sound | 0.07% | pleasure/pleʒər/pleZu?/ | vision/vɪʒən/viZun/ | beige/beɪʒ/be?Z/ |
 
 ---
 
 ## Remaining QWERTY Letters Available
 
-**Lowercase letters still available:** a, c, g, o, q, x, y
+**Lowercase letters still available:** a, o, q, x, y
 
-**Uppercase letters still available:** A, B, C, D, F, G, I, K, L, M, N, O, P, Q, R, U, V, W, X, Y, Z
+**Uppercase letters still available:** A, B, C, D, F, I, K, L, M, N, O, P, R, U, V, W, X, Y
