@@ -48,14 +48,14 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | d | d | D sound | 4.21% | dog/dɒg/dɒg/ | ladder/lædər/læder/ | red/red/red/ |
 | l | l | L sound | 3.96% | love/lʌv/lʌv/ | yellow/jeləʊ/jelAʊ/ | call/kɔːl/kɔl/ |
 | k | k | K sound | 3.18% | key/kiː/kE/ | school/skuːl/skul/ | book/bʊk/bʊk/ |
-| ð |  | TH (this) | 2.95% | this/ðɪs/?/ | mother/mʌðər/?/ | breathe/briːð/?/ |
-| m |  | M sound | 2.76% | man/mæn/?/ | summer/sʌmər/?/ | time/taɪm/?/ |
-| z |  | Z sound | 2.76% | zoo/zuː/?/ | music/mjuːzɪk/?/ | eyes/aɪz/?/ |
-| p |  | P sound | 2.15% | pen/pen/?/ | happy/hæpi/?/ | cup/kʌp/?/ |
-| v |  | V sound | 2.01% | very/veri/?/ | river/rɪvər/?/ | love/lʌv/?/ |
-| w |  | W sound | 1.95% | water/wɔːtər/?/ | away/əweɪ/?/ | quick/kwɪk/?/ |
-| b |  | B sound | 1.80% | book/bʊk/?/ | table/teɪbəl/?/ | job/dʒɒb/?/ |
-| f |  | F sound | 1.71% | fish/fɪʃ/?/ | coffee/kɒfi/?/ | leaf/liːf/?/ |
+| ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/m?TAr/ | breathe/briːð/brET/ |
+| m | m | M sound | 2.76% | man/mæn/m?n/ | summer/sʌmər/s?mAr/ | time/taɪm/t?im/ |
+| z | z | Z sound | 2.76% | zoo/zuː/zu/ | music/mjuːzɪk/m?zik/ | eyes/aɪz/?iz/ |
+| p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/h?pi/ | cup/kʌp/k?p/ |
+| v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivAr/ | love/lʌv/l?v/ |
+| w | w | W sound | 1.95% | water/wɔːtər/w?tAr/ | away/əweɪ/Awe?/ | quick/kwɪk/kwik/ |
+| b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bAl/ | job/dʒɒb/?Ab/ |
+| f | f | F sound | 1.71% | fish/fɪʃ/fi?/ | coffee/kɒfi/k?fi/ | leaf/liːf/lEf/ |
 | h | h | H sound | 1.40% | house/haʊs/haʊs/ | perhaps/pərhæps/perhAps/ | hello/heləʊ/helAʊ/ |
 | ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
 | ʃ |  | SH sound | 0.97% | ship/ʃɪp/ʃip/ | washing/wɒʃɪŋ/?/ | fish/fɪʃ/?/ |
@@ -70,6 +70,6 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 ## Remaining QWERTY Letters Available
 
-**Lowercase letters still available:** a, b, c, f, g, j, m, o, p, q, u, v, w, x, y, z
+**Lowercase letters still available:** a, c, g, j, o, q, u, x, y
 
-**Uppercase letters still available:** B, C, D, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z
+**Uppercase letters still available:** B, C, D, F, G, I, J, K, L, M, N, O, P, Q, R, S, U, V, W, X, Y, Z
