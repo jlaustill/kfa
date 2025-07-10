@@ -18,9 +18,9 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
 | ə | u | Schwa | 11.49% | about/əbaʊt/ub?t/ | sofa/səʊfə/s?fu/ | banana/bənɑːnə/bun?nu/ |
 | ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
-| iː | E | Long E | 3.61% | see/siː/sE/ | tree/triː/trE/ | key/kiː/kE/ |
-| ɜː |  | UR sound | 2.86% | bird/bɜːd/?/ | word/wɜːd/?/ | nurse/nɜːs/?/ |
-| æ |  | Short A | 2.10% | cat/kæt/?/ | bat/bæt/?/ | hand/hænd/?/ |
+| iː | y | Long E | 3.61% | see/siː/sy/ | tree/triː/try/ | key/kiː/ky/ |
+| ɜː | E | UR sound | 2.86% | bird/bɜːd/bEd/ | word/wɜːd/wEd/ | nurse/nɜːs/nEs/ |
+| æ | a | Short A | 2.10% | cat/kæt/kat/ | bat/bæt/bat/ | hand/hænd/hand/ |
 | uː |  | Long U | 1.93% | moon/muːn/?/ | blue/bluː/?/ | food/fuːd/?/ |
 | e | e | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
 | ʌ |  | Schwa-like | 1.74% | cup/kʌp/?/ | love/lʌv/?/ | blood/blʌd/?/ |
@@ -43,26 +43,26 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
 | n | n | N sound | 7.11% | no/nəʊ/n?u/ | dinner/dɪnər/dinu?/ | sun/sʌn/s?un/ |
 | r | r | R sound | 6.94% | red/red/red/ | sorry/sɒri/sɒri/ | car/kɑːr/kɑr/ |
-| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/betu?/ | cat/kæt/k?t/ |
+| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/betu?/ | cat/kæt/kat/ |
 | s | s | S sound | 4.75% | sun/sʌn/s?n/ | lesson/lesən/lesun/ | bus/bʌs/b?s/ |
-| d | d | D sound | 4.21% | dog/dɒg/d?g/ | ladder/lædər/l?du?/ | red/red/red/ |
+| d | d | D sound | 4.21% | dog/dɒg/d?g/ | ladder/lædər/ladu?/ | red/red/red/ |
 | l | l | L sound | 3.96% | love/lʌv/l?v/ | yellow/jeləʊ/jelu?/ | call/kɔːl/k?l/ |
-| k | k | K sound | 3.18% | key/kiː/kE/ | school/skuːl/skul/ | book/bʊk/bʊk/ |
+| k | k | K sound | 3.18% | key/kiː/ky/ | school/skuːl/sk?l/ | book/bʊk/b?k/ |
 | ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/m?Tu?/ | breathe/briːð/brET/ |
-| m | m | M sound | 2.76% | man/mæn/m?n/ | summer/sʌmər/s?mu?/ | time/taɪm/t?im/ |
+| m | m | M sound | 2.76% | man/mæn/man/ | summer/sʌmər/s?mu?/ | time/taɪm/taim/ |
 | z | z | Z sound | 2.76% | zoo/zuː/zu/ | music/mjuːzɪk/m?zik/ | eyes/aɪz/?iz/ |
-| p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/h?pi/ | cup/kʌp/k?p/ |
+| p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/hapy/ | cup/kʌp/k?p/ |
 | v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivu?/ | love/lʌv/l?v/ |
 | w | w | W sound | 1.95% | water/wɔːtər/w?tu?/ | away/əweɪ/uwe?/ | quick/kwɪk/kwik/ |
 | b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bul/ | job/dʒɒb/J?b/ |
-| f | f | F sound | 1.71% | fish/fɪʃ/fi?/ | coffee/kɒfi/k?fi/ | leaf/liːf/lEf/ |
+| f | f | F sound | 1.71% | fish/fɪʃ/fiS/ | coffee/kɒfi/k?fi/ | leaf/liːf/lyf/ |
 | h | h | H sound | 1.40% | house/haʊs/h?s/ | perhaps/pərhæps/purh?ps/ | hello/heləʊ/helu?/ |
 | ŋ | G | NG sound | 0.99% | sing/sɪŋ/siG/ | thinking/θɪŋkɪŋ/QiGkiG/ | long/lɒŋ/l?G/ |
 | ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/w?SiG/ | fish/fɪʃ/fiS/ |
 | j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mj?zik/ | few/fjuː/fj?/ |
-| g | g | G sound | 0.80% | go/gəʊ/g?/ | bigger/bɪgər/bigu?/ | bag/bæg/b?g/ |
-| dʒ | J | J sound | 0.59% | jump/dʒʌmp/J?mp/ | magic/mædʒɪk/m?Jik/ | bridge/brɪdʒ/briJ/ |
-| tʃ | c | CH sound | 0.56% | chair/tʃeər/ce?/ | teacher/tiːtʃər/tEcu?/ | watch/wɒtʃ/w?c/ |
+| g | g | G sound | 0.80% | go/gəʊ/g?/ | bigger/bɪgər/bigu?/ | bag/bæg/bag/ |
+| dʒ | J | J sound | 0.59% | jump/dʒʌmp/J?mp/ | magic/mædʒɪk/maJik/ | bridge/brɪdʒ/briJ/ |
+| tʃ | c | CH sound | 0.56% | chair/tʃeər/ce?/ | teacher/tiːtʃər/tycu?/ | watch/wɒtʃ/w?c/ |
 | θ | Q | TH (thin) | 0.41% | think/θɪŋk/QiGk/ | nothing/nʌθɪŋ/n?QiG/ | path/pɑːθ/p?Q/ |
 | ʒ | Z | ZH sound | 0.07% | pleasure/pleʒər/pleZu?/ | vision/vɪʒən/viZun/ | beige/beɪʒ/be?Z/ |
 
@@ -70,6 +70,6 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 ## Remaining QWERTY Letters Available
 
-**Lowercase letters still available:** a, o, q, x, y
+**Lowercase letters still available:** o, q, x
 
 **Uppercase letters still available:** A, B, C, D, F, I, K, L, M, N, O, P, R, U, V, W, X, Y
