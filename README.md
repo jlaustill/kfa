@@ -10,13 +10,13 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 **Example Format:** `english/ipa/kfa`
 - **english**: The English word
 - **ipa**: International Phonetic Alphabet transcription  
-- **kfa**: KFA (QWERTY Phonetic Alphabet) transcription
+- **kfa**: KFA (QWERTY Phonetic Alphabet) transcription (use `?` for unassigned phonemes)
 
 ### Vowels (20 sounds)
 
 | IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
-| ə | A | Schwa | 11.49% | about/əbaʊt/AbaʊT/ | circus/sɜːkəs/sɜːkAs/ | taken/teɪkən/teɪkAn/ |
+| ə | u | Schwa | 11.49% | about/əbaʊt/ub?t/ | sofa/səʊfə/s?fu/ | banana/bənɑːnə/bun?nu/ |
 | ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/ʃip/ | gym/dʒɪm/dʒim/ |
 | iː | E | Long E | 3.61% | see/siː/sE/ | tree/triː/trE/ | key/kiː/kE/ |
 | ɜː |  | UR sound | 2.86% | bird/bɜːd/?/ | word/wɜːd/?/ | nurse/nɜːs/?/ |
@@ -41,22 +41,22 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 | IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
-| n | n | N sound | 7.11% | no/nəʊ/nəʊ/ | dinner/dɪnər/dinAr/ | sun/sʌn/sʌn/ |
+| n | n | N sound | 7.11% | no/nəʊ/n?u/ | dinner/dɪnər/dinu?/ | sun/sʌn/s?un/ |
 | r | r | R sound | 6.94% | red/red/red/ | sorry/sɒri/sɒri/ | car/kɑːr/kɑr/ |
-| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/beter/ | cat/kæt/kæt/ |
-| s | s | S sound | 4.75% | sun/sʌn/sʌn/ | lesson/lesən/lesen/ | bus/bʌs/bʌs/ |
-| d | d | D sound | 4.21% | dog/dɒg/dɒg/ | ladder/lædər/læder/ | red/red/red/ |
-| l | l | L sound | 3.96% | love/lʌv/lʌv/ | yellow/jeləʊ/jelAʊ/ | call/kɔːl/kɔl/ |
+| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/betu?/ | cat/kæt/k?t/ |
+| s | s | S sound | 4.75% | sun/sʌn/s?n/ | lesson/lesən/lesun/ | bus/bʌs/b?s/ |
+| d | d | D sound | 4.21% | dog/dɒg/d?g/ | ladder/lædər/l?du?/ | red/red/red/ |
+| l | l | L sound | 3.96% | love/lʌv/l?v/ | yellow/jeləʊ/jelu?/ | call/kɔːl/k?l/ |
 | k | k | K sound | 3.18% | key/kiː/kE/ | school/skuːl/skul/ | book/bʊk/bʊk/ |
-| ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/m?TAr/ | breathe/briːð/brET/ |
-| m | m | M sound | 2.76% | man/mæn/m?n/ | summer/sʌmər/s?mAr/ | time/taɪm/t?im/ |
+| ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/m?Tu?/ | breathe/briːð/brET/ |
+| m | m | M sound | 2.76% | man/mæn/m?n/ | summer/sʌmər/s?mu?/ | time/taɪm/t?im/ |
 | z | z | Z sound | 2.76% | zoo/zuː/zu/ | music/mjuːzɪk/m?zik/ | eyes/aɪz/?iz/ |
 | p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/h?pi/ | cup/kʌp/k?p/ |
-| v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivAr/ | love/lʌv/l?v/ |
-| w | w | W sound | 1.95% | water/wɔːtər/w?tAr/ | away/əweɪ/Awe?/ | quick/kwɪk/kwik/ |
-| b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bAl/ | job/dʒɒb/?Ab/ |
+| v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivu?/ | love/lʌv/l?v/ |
+| w | w | W sound | 1.95% | water/wɔːtər/w?tu?/ | away/əweɪ/uwe?/ | quick/kwɪk/kwik/ |
+| b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bul/ | job/dʒɒb/?b/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fi?/ | coffee/kɒfi/k?fi/ | leaf/liːf/lEf/ |
-| h | h | H sound | 1.40% | house/haʊs/haʊs/ | perhaps/pərhæps/perhAps/ | hello/heləʊ/helAʊ/ |
+| h | h | H sound | 1.40% | house/haʊs/h?s/ | perhaps/pərhæps/purh?ps/ | hello/heləʊ/helu?/ |
 | ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
 | ʃ |  | SH sound | 0.97% | ship/ʃɪp/ʃip/ | washing/wɒʃɪŋ/?/ | fish/fɪʃ/?/ |
 | j |  | Y sound | 0.81% | yes/jes/?/ | music/mjuːzɪk/?/ | few/fjuː/?/ |
@@ -70,6 +70,6 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 ## Remaining QWERTY Letters Available
 
-**Lowercase letters still available:** a, c, g, j, o, q, u, x, y
+**Lowercase letters still available:** a, c, g, j, o, q, x, y
 
-**Uppercase letters still available:** B, C, D, F, G, I, J, K, L, M, N, O, P, Q, R, S, U, V, W, X, Y, Z
+**Uppercase letters still available:** A, B, C, D, F, G, I, J, K, L, M, N, O, P, Q, R, S, U, V, W, X, Y, Z
