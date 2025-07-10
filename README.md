@@ -16,55 +16,55 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 | IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
-| iː | E | Long E | 3.61% | see/siː/sE/ | tree/triː/trE/ | key/kiː/kE/ |
-| ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/ʃip/ | gym/dʒɪm/dʒim/ |
-| e | e | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
-| æ |  | Short A | 2.10% | cat/kæt/?/ | bat/bæt/?/ | hand/hænd/?/ |
-| ɑː |  | Long A | 1.45% | car/kɑːr/?/ | father/fɑːðər/?/ | palm/pɑːm/?/ |
-| ɒ |  | Short O | 1.18% | hot/hɒt/?/ | dog/dɒg/?/ | wash/wɒʃ/?/ |
-| ɔː |  | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
-| ʊ |  | Short U | 0.43% | book/bʊk/?/ | good/gʊd/?/ | put/pʊt/?/ |
-| uː |  | Long U | 1.93% | moon/muːn/?/ | blue/bluː/?/ | food/fuːd/?/ |
-| ʌ |  | Schwa-like | 1.74% | cup/kʌp/?/ | love/lʌv/?/ | blood/blʌd/?/ |
-| ɜː |  | UR sound | 2.86% | bird/bɜːd/?/ | word/wɜːd/?/ | nurse/nɜːs/?/ |
 | ə | A | Schwa | 11.49% | about/əbaʊt/AbaʊT/ | circus/sɜːkəs/sɜːkAs/ | taken/teɪkən/teɪkAn/ |
+| ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/ʃip/ | gym/dʒɪm/dʒim/ |
+| iː | E | Long E | 3.61% | see/siː/sE/ | tree/triː/trE/ | key/kiː/kE/ |
+| ɜː |  | UR sound | 2.86% | bird/bɜːd/?/ | word/wɜːd/?/ | nurse/nɜːs/?/ |
+| æ |  | Short A | 2.10% | cat/kæt/?/ | bat/bæt/?/ | hand/hænd/?/ |
+| uː |  | Long U | 1.93% | moon/muːn/?/ | blue/bluː/?/ | food/fuːd/?/ |
+| e | e | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
+| ʌ |  | Schwa-like | 1.74% | cup/kʌp/?/ | love/lʌv/?/ | blood/blʌd/?/ |
 | eɪ |  | Long A | 1.50% | day/deɪ/?/ | make/meɪk/?/ | rain/reɪn/?/ |
 | aɪ |  | Long I | 1.50% | my/maɪ/?/ | time/taɪm/?/ | fly/flaɪ/?/ |
-| ɔɪ |  | OY sound | 0.10% | boy/bɔɪ/?/ | coin/kɔɪn/?/ | voice/vɔɪs/?/ |
+| ɑː |  | Long A | 1.45% | car/kɑːr/?/ | father/fɑːðər/?/ | palm/pɑːm/?/ |
+| ɔː |  | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
 | əʊ |  | Long O | 1.25% | go/gəʊ/?/ | home/həʊm/?/ | boat/bəʊt/?/ |
+| ɒ |  | Short O | 1.18% | hot/hɒt/?/ | dog/dɒg/?/ | wash/wɒʃ/?/ |
 | aʊ |  | OW sound | 0.50% | now/naʊ/?/ | house/haʊs/?/ | cloud/klaʊd/?/ |
+| ʊ |  | Short U | 0.43% | book/bʊk/?/ | good/gʊd/?/ | put/pʊt/?/ |
 | ɪə |  | EER sound | 0.30% | here/hɪə/?/ | beer/bɪə/?/ | deer/dɪə/?/ |
 | eə |  | AIR sound | 0.25% | hair/heə/?/ | care/keə/?/ | bear/beə/?/ |
 | ʊə |  | UUR sound | 0.15% | sure/ʃʊə/?/ | tour/tʊə/?/ | pure/pjʊə/?/ |
+| ɔɪ |  | OY sound | 0.10% | boy/bɔɪ/?/ | coin/kɔɪn/?/ | voice/vɔɪs/?/ |
 
 ### Consonants (24 sounds)
 
 | IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
-| p |  | P sound | 2.15% | pen/pen/?/ | happy/hæpi/?/ | cup/kʌp/?/ |
-| b |  | B sound | 1.80% | book/bʊk/?/ | table/teɪbəl/?/ | job/dʒɒb/?/ |
-| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/beter/ | cat/kæt/kæt/ |
-| d | d | D sound | 4.21% | dog/dɒg/dɒg/ | ladder/lædər/læder/ | red/red/red/ |
-| k | k | K sound | 3.18% | key/kiː/kE/ | school/skuːl/skul/ | book/bʊk/bʊk/ |
-| g |  | G sound | 0.80% | go/gəʊ/?/ | bigger/bɪgər/?/ | bag/bæg/?/ |
-| f |  | F sound | 1.71% | fish/fɪʃ/?/ | coffee/kɒfi/?/ | leaf/liːf/?/ |
-| v |  | V sound | 2.01% | very/veri/?/ | river/rɪvər/?/ | love/lʌv/?/ |
-| θ |  | TH (thin) | 0.41% | think/θɪŋk/?/ | nothing/nʌθɪŋ/?/ | path/pɑːθ/?/ |
-| ð |  | TH (this) | 2.95% | this/ðɪs/?/ | mother/mʌðər/?/ | breathe/briːð/?/ |
-| s | s | S sound | 4.75% | sun/sʌn/sʌn/ | lesson/lesən/lesen/ | bus/bʌs/bʌs/ |
-| z |  | Z sound | 2.76% | zoo/zuː/?/ | music/mjuːzɪk/?/ | eyes/aɪz/?/ |
-| ʃ |  | SH sound | 0.97% | ship/ʃɪp/ʃip/ | washing/wɒʃɪŋ/?/ | fish/fɪʃ/?/ |
-| ʒ |  | ZH sound | 0.07% | pleasure/pleʒər/?/ | vision/vɪʒən/?/ | beige/beɪʒ/?/ |
-| tʃ |  | CH sound | 0.56% | chair/tʃeər/?/ | teacher/tiːtʃər/?/ | watch/wɒtʃ/?/ |
-| dʒ |  | J sound | 0.59% | jump/dʒʌmp/?/ | magic/mædʒɪk/?/ | bridge/brɪdʒ/?/ |
-| m |  | M sound | 2.76% | man/mæn/?/ | summer/sʌmər/?/ | time/taɪm/?/ |
 | n | n | N sound | 7.11% | no/nəʊ/nəʊ/ | dinner/dɪnər/dinAr/ | sun/sʌn/sʌn/ |
-| ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
-| l | l | L sound | 3.96% | love/lʌv/lʌv/ | yellow/jeləʊ/jelAʊ/ | call/kɔːl/kɔl/ |
 | r | r | R sound | 6.94% | red/red/red/ | sorry/sɒri/sɒri/ | car/kɑːr/kɑr/ |
-| j |  | Y sound | 0.81% | yes/jes/?/ | music/mjuːzɪk/?/ | few/fjuː/?/ |
+| t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/beter/ | cat/kæt/kæt/ |
+| s | s | S sound | 4.75% | sun/sʌn/sʌn/ | lesson/lesən/lesen/ | bus/bʌs/bʌs/ |
+| d | d | D sound | 4.21% | dog/dɒg/dɒg/ | ladder/lædər/læder/ | red/red/red/ |
+| l | l | L sound | 3.96% | love/lʌv/lʌv/ | yellow/jeləʊ/jelAʊ/ | call/kɔːl/kɔl/ |
+| k | k | K sound | 3.18% | key/kiː/kE/ | school/skuːl/skul/ | book/bʊk/bʊk/ |
+| ð |  | TH (this) | 2.95% | this/ðɪs/?/ | mother/mʌðər/?/ | breathe/briːð/?/ |
+| m |  | M sound | 2.76% | man/mæn/?/ | summer/sʌmər/?/ | time/taɪm/?/ |
+| z |  | Z sound | 2.76% | zoo/zuː/?/ | music/mjuːzɪk/?/ | eyes/aɪz/?/ |
+| p |  | P sound | 2.15% | pen/pen/?/ | happy/hæpi/?/ | cup/kʌp/?/ |
+| v |  | V sound | 2.01% | very/veri/?/ | river/rɪvər/?/ | love/lʌv/?/ |
 | w |  | W sound | 1.95% | water/wɔːtər/?/ | away/əweɪ/?/ | quick/kwɪk/?/ |
+| b |  | B sound | 1.80% | book/bʊk/?/ | table/teɪbəl/?/ | job/dʒɒb/?/ |
+| f |  | F sound | 1.71% | fish/fɪʃ/?/ | coffee/kɒfi/?/ | leaf/liːf/?/ |
 | h | h | H sound | 1.40% | house/haʊs/haʊs/ | perhaps/pərhæps/perhAps/ | hello/heləʊ/helAʊ/ |
+| ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
+| ʃ |  | SH sound | 0.97% | ship/ʃɪp/ʃip/ | washing/wɒʃɪŋ/?/ | fish/fɪʃ/?/ |
+| j |  | Y sound | 0.81% | yes/jes/?/ | music/mjuːzɪk/?/ | few/fjuː/?/ |
+| g |  | G sound | 0.80% | go/gəʊ/?/ | bigger/bɪgər/?/ | bag/bæg/?/ |
+| dʒ |  | J sound | 0.59% | jump/dʒʌmp/?/ | magic/mædʒɪk/?/ | bridge/brɪdʒ/?/ |
+| tʃ |  | CH sound | 0.56% | chair/tʃeər/?/ | teacher/tiːtʃər/?/ | watch/wɒtʃ/?/ |
+| θ |  | TH (thin) | 0.41% | think/θɪŋk/?/ | nothing/nʌθɪŋ/?/ | path/pɑːθ/?/ |
+| ʒ |  | ZH sound | 0.07% | pleasure/pleʒər/?/ | vision/vɪʒən/?/ | beige/beɪʒ/?/ |
 
 ---
 
