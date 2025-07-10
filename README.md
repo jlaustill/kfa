@@ -17,7 +17,7 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
 | ə | u | Schwa | 11.49% | about/əbaʊt/ub?t/ | sofa/səʊfə/s?fu/ | banana/bənɑːnə/bun?nu/ |
-| ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/ʃip/ | gym/dʒɪm/dʒim/ |
+| ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
 | iː | E | Long E | 3.61% | see/siː/sE/ | tree/triː/trE/ | key/kiː/kE/ |
 | ɜː |  | UR sound | 2.86% | bird/bɜːd/?/ | word/wɜːd/?/ | nurse/nɜːs/?/ |
 | æ |  | Short A | 2.10% | cat/kæt/?/ | bat/bæt/?/ | hand/hænd/?/ |
@@ -54,14 +54,14 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/h?pi/ | cup/kʌp/k?p/ |
 | v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivu?/ | love/lʌv/l?v/ |
 | w | w | W sound | 1.95% | water/wɔːtər/w?tu?/ | away/əweɪ/uwe?/ | quick/kwɪk/kwik/ |
-| b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bul/ | job/dʒɒb/?b/ |
+| b | b | B sound | 1.80% | book/bʊk/b?k/ | table/teɪbəl/te?bul/ | job/dʒɒb/J?b/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fi?/ | coffee/kɒfi/k?fi/ | leaf/liːf/lEf/ |
 | h | h | H sound | 1.40% | house/haʊs/h?s/ | perhaps/pərhæps/purh?ps/ | hello/heləʊ/helu?/ |
 | ŋ |  | NG sound | 0.99% | sing/sɪŋ/?/ | thinking/θɪŋkɪŋ/?/ | long/lɒŋ/?/ |
-| ʃ |  | SH sound | 0.97% | ship/ʃɪp/ʃip/ | washing/wɒʃɪŋ/?/ | fish/fɪʃ/?/ |
-| j |  | Y sound | 0.81% | yes/jes/?/ | music/mjuːzɪk/?/ | few/fjuː/?/ |
+| ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/w?Si?/ | fish/fɪʃ/fiS/ |
+| j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mj?zik/ | few/fjuː/fj?/ |
 | g |  | G sound | 0.80% | go/gəʊ/?/ | bigger/bɪgər/?/ | bag/bæg/?/ |
-| dʒ |  | J sound | 0.59% | jump/dʒʌmp/?/ | magic/mædʒɪk/?/ | bridge/brɪdʒ/?/ |
+| dʒ | J | J sound | 0.59% | jump/dʒʌmp/J?mp/ | magic/mædʒɪk/m?Jik/ | bridge/brɪdʒ/briJ/ |
 | tʃ |  | CH sound | 0.56% | chair/tʃeər/?/ | teacher/tiːtʃər/?/ | watch/wɒtʃ/?/ |
 | θ |  | TH (thin) | 0.41% | think/θɪŋk/?/ | nothing/nʌθɪŋ/?/ | path/pɑːθ/?/ |
 | ʒ |  | ZH sound | 0.07% | pleasure/pleʒər/?/ | vision/vɪʒən/?/ | beige/beɪʒ/?/ |
@@ -70,6 +70,6 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 ## Remaining QWERTY Letters Available
 
-**Lowercase letters still available:** a, c, g, j, o, q, x, y
+**Lowercase letters still available:** a, c, g, o, q, x, y
 
-**Uppercase letters still available:** A, B, C, D, F, G, I, J, K, L, M, N, O, P, Q, R, S, U, V, W, X, Y, Z
+**Uppercase letters still available:** A, B, C, D, F, G, I, K, L, M, N, O, P, Q, R, U, V, W, X, Y, Z
