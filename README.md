@@ -77,3 +77,31 @@ Unlike traditional phonetic alphabets that use special symbols, kfa constrains i
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
+
+---
+
+## Demonstration: The Gettysburg Address
+
+**English:**
+> "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
+
+**kfa:**
+> "fOr skOr and sevun yiErz uguO auEr fATuEz brot forQ on Tis kontinunt, u nO neysun, kunsyvd in libErty, and dedikeyted tu Tu propuzisun Tat ol men Ar kryeyted ykwul."
+
+This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (fATuEz), "conceived" (kunsyvd), and "created" (kryeyted) are represented through logical combinations of core vowels and consonants.
+
+## Demonstration: Eliminating English Spelling Confusion
+
+**English:**
+> "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
+
+**kfa:**
+> "wic wic iz wic? TeE at TeE haus OvuE TeE! yOr dog eyt yOr dinuE, but yOr not SUE hOz dog it waz or hOz kuming tO dinuE."
+
+This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
+- **which/witch** = both `wic` (identical pronunciation, identical spelling)
+- **they're/their/there** = all `TeE` (same sound, same spelling)  
+- **your/you're** = both `yOr` (phonetically identical)
+- **whose/who's** = both `hOz` (eliminates arbitrary apostrophe confusion)
+
+The kfa system represents how words actually sound, not their historical spelling accidents, making it invaluable for language learners and eliminating common English spelling confusion.
