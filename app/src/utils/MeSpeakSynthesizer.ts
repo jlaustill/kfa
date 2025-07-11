@@ -25,6 +25,7 @@ interface IMeSpeakOptions {
   speed?: number;
   voice?: string;
   wordgap?: number;
+  variant?: string;
 }
 
 class MeSpeakSynthesizer {
@@ -189,6 +190,7 @@ class MeSpeakSynthesizer {
     console.log(`kfa: ${kfaText}`);
     console.log(`IPA: ${this.kfaConverter.convert(kfaText)}`);
     console.log(`eSpeak: ${espeakPhonemes}`);
+    console.log(`Options:`, options);
 
     const speakOptions = {
       amplitude: options.amplitude ?? 100,
@@ -196,8 +198,10 @@ class MeSpeakSynthesizer {
       speed: options.speed ?? 175,
       voice: options.voice ?? 'en/en-us',
       wordgap: options.wordgap ?? 0,
-      ...options,
+      ...(options.variant && { variant: options.variant }),
     };
+    
+    console.log(`speakOptions:`, speakOptions);
 
     return new Promise((resolve, reject) => {
       try {
