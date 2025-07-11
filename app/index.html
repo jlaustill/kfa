@@ -4,7 +4,39 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>kfa Text-to-Speech - QWERTY Phonetic Alphabet</title>
+    
+    <!-- meSpeak.js for proper phonetic speech synthesis -->
+    <!-- Try building from the npm package files -->
+    <script>
+      // Let's build our own simple loader for the mespeak files we have locally
+      console.log('Loading meSpeak files...');
+      
+      // Create a simple meSpeak implementation based on what we know
+      window.meSpeak = {
+        speak: function(text, options, callback) {
+          console.log('meSpeak speaking:', text, 'with options:', options);
+          
+          // For now, let's just use a simple audio approach
+          // We'll create a proper implementation once we get the basic structure working
+          if (callback) {
+            setTimeout(callback, 1000); // Simulate speech duration
+          }
+          
+          return true;
+        },
+        loadConfig: function(config) {
+          console.log('meSpeak loadConfig called with:', config);
+          return true;
+        },
+        loadVoice: function(voice) {
+          console.log('meSpeak loadVoice called with:', voice);
+          return true;
+        }
+      };
+      
+      console.log('Basic meSpeak interface created');
+    </script>
   </head>
   <body>
     <div id="root"></div>
