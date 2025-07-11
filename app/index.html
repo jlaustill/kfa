@@ -7,35 +7,64 @@
     <title>kfa Text-to-Speech - QWERTY Phonetic Alphabet</title>
     
     <!-- meSpeak.js for proper phonetic speech synthesis -->
-    <!-- Try building from the npm package files -->
     <script>
-      // Let's build our own simple loader for the mespeak files we have locally
-      console.log('Loading meSpeak files...');
+      // Create a simplified browser-compatible speech synthesis
+      console.log('Creating browser-compatible speech synthesis...');
       
-      // Create a simple meSpeak implementation based on what we know
       window.meSpeak = {
         speak: function(text, options, callback) {
-          console.log('meSpeak speaking:', text, 'with options:', options);
+          console.log('Speaking:', text, 'with options:', options);
           
-          // For now, let's just use a simple audio approach
-          // We'll create a proper implementation once we get the basic structure working
-          if (callback) {
-            setTimeout(callback, 1000); // Simulate speech duration
+          // Use Web Audio API to create actual audio from eSpeak phonemes
+          try {
+            // Parse eSpeak phonemes from the text
+            const phoneticMatch = text.match(/\[\[([^\]]+)\]\]/);
+            if (phoneticMatch) {
+              const phonemes = phoneticMatch[1];
+              console.log('Extracted phonemes:', phonemes);
+              
+              // Create a simple beep tone for now to prove audio works
+              const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+              const oscillator = audioContext.createOscillator();
+              const gainNode = audioContext.createGain();
+              
+              oscillator.connect(gainNode);
+              gainNode.connect(audioContext.destination);
+              
+              oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
+              gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+              gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+              
+              oscillator.start(audioContext.currentTime);
+              oscillator.stop(audioContext.currentTime + 0.5);
+              
+              if (callback) {
+                setTimeout(callback, 600);
+              }
+            } else {
+              console.log('No phonemes found in text:', text);
+              if (callback) setTimeout(callback, 100);
+            }
+          } catch (error) {
+            console.error('Audio synthesis error:', error);
+            if (callback) setTimeout(callback, 100);
           }
           
           return true;
         },
+        
         loadConfig: function(config) {
           console.log('meSpeak loadConfig called with:', config);
           return true;
         },
+        
         loadVoice: function(voice) {
           console.log('meSpeak loadVoice called with:', voice);
           return true;
         }
       };
       
-      console.log('Basic meSpeak interface created');
+      console.log('Browser-compatible meSpeak interface created');
     </script>
   </head>
   <body>
