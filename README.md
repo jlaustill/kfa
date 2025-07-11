@@ -24,8 +24,8 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | uː | O | boot/hoot/coot | Long U | 1.93% | moon/muːn/mOn/ | blue/bluː/blO/ | food/fuːd/fOd/ |
 | e | e | bet/het/- | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
 | ʌ | u | but/hut/cut | Schwa-like | 1.74% | cup/kʌp/kup/ | love/lʌv/luv/ | blood/blʌd/blud/ |
-| eɪ |  | bait/hate/Kate | Long A | 1.50% | day/deɪ/?/ | make/meɪk/?/ | rain/reɪn/?/ |
-| aɪ |  | bite/height/kite | Long I | 1.50% | my/maɪ/?/ | time/taɪm/?/ | fly/flaɪ/?/ |
+| eɪ | ey | beyt/heyt/Keyt | Long A | 1.50% | day/deɪ/dey/ | make/meɪk/meyk/ | rain/reɪn/reyn/ |
+| aɪ | ay | bayt/hayt/kayt | Long I | 1.50% | my/maɪ/may/ | time/taɪm/taym/ | fly/flaɪ/flay/ |
 | ɑː | A | bart/heart/cart | Long A | 1.45% | car/kɑːr/kAr/ | father/fɑːðər/fATu?/ | palm/pɑːm/pAlm/ |
 | ɔː |  | bought/-/caught | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
 | əʊ |  | boat/- /coat | Long O | 1.25% | go/gəʊ/?/ | home/həʊm/?/ | boat/bəʊt/?/ |
