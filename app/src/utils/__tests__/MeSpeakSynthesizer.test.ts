@@ -160,7 +160,7 @@ describe('MeSpeakSynthesizer', () => {
 
   describe('Real-world kfa examples', () => {
     test('converts Gettysburg Address examples correctly', () => {
-      expect(synthesizer.convertKfaToEspeak('fOr')).toBe('[[fu:r]]'); // four
+      expect(synthesizer.convertKfaToEspeak('for')).toBe('[[fO:r]]'); // four
       expect(synthesizer.convertKfaToEspeak('sevun')).toBe('[[sEv@n]]'); // seven
       expect(synthesizer.convertKfaToEspeak('yiErz')).toBe('[[i:I@rz]]'); // years (no 'j' at start)
     });
@@ -171,7 +171,7 @@ describe('MeSpeakSynthesizer', () => {
     });
 
     test('handles complex diphthongs', () => {
-      expect(synthesizer.convertKfaToEspeak('boUy')).toBe('[[bOI]]'); // boy
+      expect(synthesizer.convertKfaToEspeak('buy')).toBe('[[bOI]]'); // boy
       expect(synthesizer.convertKfaToEspeak('haus')).toBe('[[haUs]]'); // house
       expect(synthesizer.convertKfaToEspeak('biE')).toBe('[[bI@]]'); // beer
     });

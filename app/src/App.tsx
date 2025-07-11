@@ -105,7 +105,7 @@ function App(): React.JSX.Element {
   
   const kfaExamples = [
     { label: "Basic Sounds", text: "bit Sip Jym kat bat hand sy try ky" },
-    { label: "Gettysburg Opening", text: "fOr skOr and sevun yiErz uguO" },
+    { label: "Gettysburg Opening", text: "for skOr and sevun yiErz uguO" },
     { label: "Homophones", text: "wic wic iz wic? TeE at TeE haus" },
     { label: "Complex Words", text: "kunsyvd libErty kryeyted ykwul" },
     { label: "Vowel Spectrum", text: "u i y E a O e A o U" },
@@ -387,7 +387,7 @@ function App(): React.JSX.Element {
                   English: "Four score and seven years ago our fathers brought forth..."
                 </Typography>
                 <Typography variant="body2" sx={{ fontFamily: 'monospace' }}>
-                  kfa: "fOr skOr and sevun yiErz uguO auEr fATuEz brot forQ..."
+                  kfa: "for skOr and sevun yiErz uguO auEr fATuEz brot forQ..."
                 </Typography>
               </CardContent>
             </Card>

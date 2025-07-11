@@ -86,7 +86,7 @@ The kfa system elegantly represents complex sounds as logical combinations of co
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "fOr skOr and sevun yiErz uguO auEr fATuEz brot forQ on Tis kontinunt, u nO neysun, kunsyvd in libErty, and dedikeyted tu Tu propuzisun Tat ol men Ar kryeyted ykwul."
+> "for skOr and sevun yiErz uguO auEr fATuEz brot forQ on Tis kontinunt, u nO neysun, kunsyvd in libErty, and dedikeyted tu Tu propuzisun Tat ol men Ar kryeyted ykwul."
 
 This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (fATuEz), "conceived" (kunsyvd), and "created" (kryeyted) are represented through logical combinations of core vowels and consonants.
 
