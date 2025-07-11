@@ -27,7 +27,7 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 | eɪ | ey | beyt/heyt/Keyt | Long A | 1.50% | day/deɪ/dey/ | make/meɪk/meyk/ | rain/reɪn/reyn/ |
 | aɪ | ay | bayt/hayt/kayt | Long I | 1.50% | my/maɪ/may/ | time/taɪm/taym/ | fly/flaɪ/flay/ |
 | ɑː | A | bart/heart/cart | Long A | 1.45% | car/kɑːr/kAr/ | father/fɑːðər/fATu?/ | palm/pɑːm/pAlm/ |
-| ɔː |  | bought/-/caught | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
+| ɔː | o | bought/hot/caught | Long O | 1.25% | saw/sɔː/so/ | caught/kɔːt/kot/ | bought/bɔːt/bot/ |
 | əʊ |  | boat/- /coat | Long O | 1.25% | go/gəʊ/?/ | home/həʊm/?/ | boat/bəʊt/?/ |
 | ɒ | o | bot/hot/cot | Short O | 1.18% | hot/hɒt/hot/ | dog/dɒg/dog/ | wash/wɒʃ/woS/ |
 | aʊ |  | bout/hout/-* | OW sound | 0.50% | now/naʊ/?/ | house/haʊs/?/ | cloud/klaʊd/?/ |
