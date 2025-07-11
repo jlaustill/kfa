@@ -14,28 +14,28 @@ Unlike traditional phonetic alphabets that use special symbols, KFA constrains i
 
 ### Vowels (20 sounds)
 
-| IPA | KFA | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
-|-----|-----|-------------------|-----------|-----------|-----------|-----------|
-| ə | u | Schwa | 11.49% | about/əbaʊt/ub?t/ | sofa/səʊfə/s?fu/ | banana/bənɑːnə/bun?nu/ |
-| ɪ | i | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
-| iː | y | Long E | 3.61% | see/siː/sy/ | tree/triː/try/ | key/kiː/ky/ |
-| ɜː | E | UR sound | 2.86% | bird/bɜːd/bEd/ | word/wɜːd/wEd/ | nurse/nɜːs/nEs/ |
-| æ | a | Short A | 2.10% | cat/kæt/kat/ | bat/bæt/bat/ | hand/hænd/hand/ |
-| uː |  | Long U | 1.93% | moon/muːn/?/ | blue/bluː/?/ | food/fuːd/?/ |
-| e | e | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
-| ʌ |  | Schwa-like | 1.74% | cup/kʌp/?/ | love/lʌv/?/ | blood/blʌd/?/ |
-| eɪ |  | Long A | 1.50% | day/deɪ/?/ | make/meɪk/?/ | rain/reɪn/?/ |
-| aɪ |  | Long I | 1.50% | my/maɪ/?/ | time/taɪm/?/ | fly/flaɪ/?/ |
-| ɑː |  | Long A | 1.45% | car/kɑːr/?/ | father/fɑːðər/?/ | palm/pɑːm/?/ |
-| ɔː |  | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
-| əʊ |  | Long O | 1.25% | go/gəʊ/?/ | home/həʊm/?/ | boat/bəʊt/?/ |
-| ɒ |  | Short O | 1.18% | hot/hɒt/?/ | dog/dɒg/?/ | wash/wɒʃ/?/ |
-| aʊ |  | OW sound | 0.50% | now/naʊ/?/ | house/haʊs/?/ | cloud/klaʊd/?/ |
-| ʊ |  | Short U | 0.43% | book/bʊk/?/ | good/gʊd/?/ | put/pʊt/?/ |
-| ɪə |  | EER sound | 0.30% | here/hɪə/?/ | beer/bɪə/?/ | deer/dɪə/?/ |
-| eə |  | AIR sound | 0.25% | hair/heə/?/ | care/keə/?/ | bear/beə/?/ |
-| ʊə |  | UUR sound | 0.15% | sure/ʃʊə/?/ | tour/tʊə/?/ | pure/pjʊə/?/ |
-| ɔɪ |  | OY sound | 0.10% | boy/bɔɪ/?/ | coin/kɔɪn/?/ | voice/vɔɪs/?/ |
+| IPA | KFA | Test Words | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
+|-----|-----|------------|-------------------|-----------|-----------|-----------|-----------|
+| ə | u | but/hut/cut | Schwa | 11.49% | about/əbaʊt/ub?t/ | sofa/səʊfə/s?fu/ | banana/bənɑːnə/bun?nu/ |
+| ɪ | i | bit/hit/kit | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
+| iː | y | beat/heat/- | Long E | 3.61% | see/siː/sy/ | tree/triː/try/ | key/kiː/ky/ |
+| ɜː | E | Bert/hurt/curt | UR sound | 2.86% | bird/bɜːd/bEd/ | word/wɜːd/wEd/ | nurse/nɜːs/nEs/ |
+| æ | a | bat/hat/cat | Short A | 2.10% | cat/kæt/kat/ | bat/bæt/bat/ | hand/hænd/hand/ |
+| uː |  | boot/hoot/coot | Long U | 1.93% | moon/muːn/?/ | blue/bluː/?/ | food/fuːd/?/ |
+| e | e | bet/het/- | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
+| ʌ |  | but/hut/cut | Schwa-like | 1.74% | cup/kʌp/?/ | love/lʌv/?/ | blood/blʌd/?/ |
+| eɪ |  | bait/hate/Kate | Long A | 1.50% | day/deɪ/?/ | make/meɪk/?/ | rain/reɪn/?/ |
+| aɪ |  | bite/height/kite | Long I | 1.50% | my/maɪ/?/ | time/taɪm/?/ | fly/flaɪ/?/ |
+| ɑː |  | bart/heart/cart | Long A | 1.45% | car/kɑːr/?/ | father/fɑːðər/?/ | palm/pɑːm/?/ |
+| ɔː |  | bought/-/caught | Long O | 1.25% | saw/sɔː/?/ | door/dɔːr/?/ | bought/bɔːt/?/ |
+| əʊ |  | boat/- /coat | Long O | 1.25% | go/gəʊ/?/ | home/həʊm/?/ | boat/bəʊt/?/ |
+| ɒ |  | bot/hot/cot | Short O | 1.18% | hot/hɒt/?/ | dog/dɒg/?/ | wash/wɒʃ/?/ |
+| aʊ |  | bout/hout/-* | OW sound | 0.50% | now/naʊ/?/ | house/haʊs/?/ | cloud/klaʊd/?/ |
+| ʊ |  | -/-/-* | Short U | 0.43% | book/bʊk/?/ | good/gʊd/?/ | put/pʊt/?/ |
+| ɪə |  | beer/here/-* | EER sound | 0.30% | here/hɪə/?/ | beer/bɪə/?/ | deer/dɪə/?/ |
+| eə |  | bear/hair/care | AIR sound | 0.25% | hair/heə/?/ | care/keə/?/ | bear/beə/?/ |
+| ʊə |  | boor/- /-* | UUR sound | 0.15% | sure/ʃʊə/?/ | tour/tʊə/?/ | pure/pjʊə/?/ |
+| ɔɪ |  | -/-/-* | OY sound | 0.10% | boy/bɔɪ/?/ | coin/kɔɪn/?/ | voice/vɔɪs/?/ |
 
 ### Consonants (24 sounds)
 
