@@ -18,12 +18,14 @@ find_path(CROW_INCLUDE_DIR
 # Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/third_party/onnxruntime/include)
 
 # Source files
 set(SOURCES
     src/main.cpp
     src/tts_server.cpp
     src/speech_synthesizer.cpp
+    src/neural_synthesizer.cpp
     src/kfa_converter.cpp
 )
 
@@ -38,9 +40,14 @@ target_compile_options(kfa-tts-server PRIVATE
     -pthread
 )
 
+# ONNX Runtime library
+set(ONNXRUNTIME_ROOT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/third_party/onnxruntime)
+find_library(ONNXRUNTIME_LIB onnxruntime HINTS ${ONNXRUNTIME_ROOT_PATH}/lib)
+
 # Link libraries
 target_link_libraries(kfa-tts-server 
     pthread
+    ${ONNXRUNTIME_LIB}
 )
 
 # Install targets

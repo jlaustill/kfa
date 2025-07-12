@@ -141,9 +141,17 @@ void TTSServer::handle_client(int client_fd) {
 }
 
 void TTSServer::handle_speak_request(const std::string& request_body, std::string& response) {
-    // For now, return a simple JSON response
-    // TODO: Implement actual TTS synthesis
-    KfaConverter converter;
+    static SpeechSynthesizer synthesizer;
+    static bool synthesizer_initialized = false;
+    
+    // Initialize synthesizer once
+    if (!synthesizer_initialized) {
+        if (!synthesizer.initialize()) {
+            response = R"({"error": "Failed to initialize speech synthesizer"})";
+            return;
+        }
+        synthesizer_initialized = true;
+    }
     
     // Parse JSON (simplified - in production use a proper JSON library)
     std::string text;
@@ -162,15 +170,30 @@ void TTSServer::handle_speak_request(const std::string& request_body, std::strin
         return;
     }
     
-    // Convert kfa to IPA
-    std::string ipa_text = converter.kfa_to_ipa(text);
-    std::string espeak_text = converter.kfa_to_espeak(text);
-    
-    // For now, return conversion results as JSON
-    response = R"({"status": "success", "original": ")" + text + 
-               R"(", "ipa": ")" + ipa_text + 
-               R"(", "espeak": ")" + espeak_text + 
-               R"(", "message": "TTS synthesis not yet implemented"})";
+    try {
+        // Convert kfa to eSpeak phonemes for neural synthesis
+        KfaConverter converter;
+        std::string espeak_text = converter.kfa_to_espeak(text);
+        
+        std::cout << "Input kfa: " << text << " -> eSpeak: " << espeak_text << std::endl;
+        
+        // Synthesize using neural TTS
+        SpeechSynthesizer::SynthesisOptions options;
+        std::vector<uint8_t> audio_data = synthesizer.synthesize_phonetic(espeak_text, options);
+        
+        if (audio_data.empty()) {
+            response = R"({"error": "Failed to generate audio"})";
+            return;
+        }
+        
+        // Convert binary audio data to string for HTTP response
+        response.assign(audio_data.begin(), audio_data.end());
+        
+        std::cout << "Synthesized " << text << " to " << audio_data.size() << " bytes of WAV audio" << std::endl;
+        
+    } catch (const std::exception& e) {
+        response = R"({"error": "Synthesis failed: )" + std::string(e.what()) + R"("})";
+    }
 }
 
 void TTSServer::handle_voices_request(std::string& response) {

@@ -3,7 +3,9 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 #include <cstdint>
+#include "neural_synthesizer.h"
 
 /**
  * Speech synthesis interface for converting text to audio
@@ -43,11 +45,10 @@ public:
 private:
     bool m_initialized;
     std::map<std::string, std::string> m_voice_models;
-    
-    // Internal synthesis implementation
-    std::vector<uint8_t> run_piper_synthesis(const std::string& input, const SynthesisOptions& options, bool is_phonetic);
+    std::unique_ptr<NeuralSynthesizer> m_neural_synth;
     
     // Voice model management
     void load_available_voices();
+    void load_voice_if_needed(const std::string& voice_name);
     std::string get_voice_model_path(const std::string& voice_name) const;
 };

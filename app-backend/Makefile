@@ -3,7 +3,8 @@
 
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -O3 -pthread
-INCLUDES = -Iinclude
+INCLUDES = -Iinclude -Ithird_party/onnxruntime/include
+LIBS = -Lthird_party/onnxruntime/lib -lonnxruntime -Wl,-rpath,third_party/onnxruntime/lib
 TARGET = kfa-tts-server
 SRCDIR = src
 OBJDIR = obj
@@ -23,7 +24,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp | $(OBJDIR)
 
 # Build main executable
 $(TARGET): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $(OBJECTS) $(LIBS) -o $(TARGET)
 	@echo "Build complete: $(TARGET)"
 
 # Clean build artifacts
