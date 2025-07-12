@@ -18,12 +18,26 @@ NeuralSynthesizer::~NeuralSynthesizer() {
 }
 
 bool NeuralSynthesizer::initialize() {
-    std::cout << "Initializing Neural Synthesizer (mock mode for debugging)..." << std::endl;
+    std::cout << "Initializing Neural Synthesizer with ONNX Runtime..." << std::endl;
     
-    // Temporarily disable ONNX Runtime to debug memory issues
-    m_initialized = true;
-    std::cout << "Neural Synthesizer initialized successfully (mock mode)" << std::endl;
-    return true;
+    try {
+        // Create environment - no smart pointers, just stack objects
+        m_ort_env = std::make_unique<Ort::Env>(ORT_LOGGING_LEVEL_WARNING, "NeuralSynthesizer");
+        
+        // Create memory info
+        m_memory_info = std::make_unique<Ort::MemoryInfo>(
+            Ort::MemoryInfo::CreateCpu(OrtArenaAllocator, OrtMemTypeDefault)
+        );
+        
+        m_initialized = true;
+        std::cout << "Neural Synthesizer initialized successfully" << std::endl;
+        return true;
+        
+    } catch (const std::exception& e) {
+        std::cerr << "Failed to initialize ONNX Runtime: " << e.what() << std::endl;
+        m_initialized = false;
+        return false;
+    }
 }
 
 bool NeuralSynthesizer::load_voice(const VoiceConfig& config) {
@@ -36,21 +50,50 @@ bool NeuralSynthesizer::load_voice(const VoiceConfig& config) {
     
     VoiceConfig voice_config = config;
     
-    // Simplified config loading
-    std::cout << "Loading voice config for: " << config.model_path << std::endl;
+    // Load JSON config file for phoneme mappings
+    std::string json_config_path = config.model_path + ".json";
+    std::cout << "Loading voice config from: " << json_config_path << std::endl;
+    
+    if (!load_voice_config_json(json_config_path, voice_config)) {
+        throw std::runtime_error("Failed to load voice config JSON: " + json_config_path);
+    }
+    
+    // Always use user-provided parameters for speech control
+    voice_config.length_scale = config.length_scale;
+    voice_config.noise_scale = config.noise_scale;
+    voice_config.noise_w = config.noise_w;
+    
+    std::cout << "🎛️  Final speech parameters:" << std::endl;
+    std::cout << "   Length scale: " << voice_config.length_scale << std::endl;
+    std::cout << "   Noise scale: " << voice_config.noise_scale << std::endl;
+    std::cout << "   Noise W: " << voice_config.noise_w << std::endl;
     
     // Check if model file exists
     std::ifstream model_file(config.model_path);
     if (!model_file.good()) {
-        std::cout << "Voice model file not found: " << config.model_path << " (fallback to mock)" << std::endl;
-        m_current_voice = voice_config;
-        return true; // Allow mock mode
+        throw std::runtime_error("Voice model file not found: " + config.model_path);
     }
     
-    // Temporarily skip ONNX model loading
-    m_current_voice = voice_config;
-    std::cout << "Voice config loaded (mock mode)" << std::endl;
-    return true;
+    try {
+        // Create session options
+        Ort::SessionOptions session_options;
+        session_options.SetIntraOpNumThreads(1);
+        session_options.SetGraphOptimizationLevel(GraphOptimizationLevel::ORT_ENABLE_BASIC);
+        
+        // File existence already checked above
+        
+        // Load the ONNX model carefully
+        std::cout << "Loading ONNX model: " << config.model_path << std::endl;
+        m_ort_session = std::make_unique<Ort::Session>(*m_ort_env, config.model_path.c_str(), session_options);
+        
+        m_current_voice = voice_config;
+        std::cout << "Voice model loaded successfully!" << std::endl;
+        return true;
+        
+    } catch (const std::exception& e) {
+        std::cerr << "ONNX model loading failed: " << e.what() << std::endl;
+        throw std::runtime_error("Failed to load ONNX model: " + std::string(e.what()));
+    }
 }
 
 std::vector<uint8_t> NeuralSynthesizer::synthesize_text(const std::string& text) {
@@ -74,11 +117,10 @@ std::vector<uint8_t> NeuralSynthesizer::synthesize_phonetic(const std::string& p
         return {};
     }
     
-    std::cout << "Synthesizing phonemes: " << phonemes << std::endl;
+    std::cout << "Synthesizing IPA phonemes directly: " << phonemes << std::endl;
     
-    // For phonetic input, we can process it similarly to text
-    // In a real implementation, this would bypass text-to-phoneme conversion
-    std::vector<float> audio_data = text_to_audio_data(phonemes);
+    // Process IPA phonemes directly, bypassing kfa conversion
+    std::vector<float> audio_data = ipa_to_audio_data(phonemes);
     
     return audio_data_to_wav(audio_data, m_current_voice.sample_rate);
 }
@@ -98,23 +140,73 @@ std::vector<std::string> NeuralSynthesizer::get_available_voices() const {
 }
 
 std::vector<float> NeuralSynthesizer::text_to_audio_data(const std::string& input) {
-    std::cout << "Processing input: " << input << std::endl;
+    std::cout << "Processing kfa input: " << input << std::endl;
     
-    // For now, just use mock implementation to avoid memory issues
-    // TODO: Fix ONNX inference memory management
-    const int duration_seconds = std::max(1, static_cast<int>(input.length()) / 10);
-    const int sample_count = duration_seconds * m_current_voice.sample_rate;
-    const float frequency = 200.0f + (input.length() * 50.0f); // Vary frequency based on input
-    
-    std::vector<float> audio_data(sample_count);
-    
-    for (int i = 0; i < sample_count; ++i) {
-        float t = static_cast<float>(i) / m_current_voice.sample_rate;
-        audio_data[i] = 0.2f * std::sin(2.0f * M_PI * frequency * t);
+    // ONNX inference ONLY - no fallbacks
+    if (!m_initialized) {
+        throw std::runtime_error("Neural synthesizer not initialized");
     }
     
-    std::cout << "Generated " << audio_data.size() << " audio samples (safe mock)" << std::endl;
-    return audio_data;
+    if (!m_ort_session) {
+        throw std::runtime_error("ONNX session not loaded - cannot synthesize without neural model");
+    }
+    
+    // Convert kfa → IPA phonemes (Piper uses IPA directly, not eSpeak format)
+    std::cout << "🔄 Converting kfa to IPA phonemes..." << std::endl;
+    std::string ipa_phonemes = m_kfa_converter.kfa_to_ipa(input);
+    std::cout << "  kfa: '" << input << "'" << std::endl;
+    std::cout << "  IPA: '" << ipa_phonemes << "'" << std::endl;
+    
+    if (ipa_phonemes.empty()) {
+        throw std::runtime_error("Failed to convert kfa '" + input + "' to IPA phonemes");
+    }
+    
+    std::cout << "Attempting ONNX inference..." << std::endl;
+    
+    // Convert IPA phonemes to phoneme IDs
+    std::vector<int64_t> phoneme_ids = phonemes_to_ids(ipa_phonemes);
+    
+    if (phoneme_ids.empty()) {
+        throw std::runtime_error("Failed to convert IPA phonemes '" + ipa_phonemes + "' to phoneme IDs");
+    }
+    
+    std::cout << "Converted '" << input << "' → '" << ipa_phonemes << "' → " << phoneme_ids.size() << " phoneme IDs" << std::endl;
+    
+    return run_onnx_inference(phoneme_ids);
+}
+
+std::vector<float> NeuralSynthesizer::ipa_to_audio_data(const std::string& ipa_phonemes) {
+    std::cout << "Processing IPA input directly: " << ipa_phonemes << std::endl;
+    
+    // ONNX inference ONLY - no fallbacks
+    if (!m_initialized) {
+        throw std::runtime_error("Neural synthesizer not initialized");
+    }
+    
+    if (!m_ort_session) {
+        throw std::runtime_error("ONNX session not loaded - cannot synthesize without neural model");
+    }
+    
+    // Process IPA phonemes directly - no kfa conversion
+    std::cout << "🔄 Processing IPA phonemes directly..." << std::endl;
+    std::cout << "  Input IPA: '" << ipa_phonemes << "'" << std::endl;
+    
+    if (ipa_phonemes.empty()) {
+        throw std::runtime_error("Empty IPA phonemes input");
+    }
+    
+    std::cout << "Attempting ONNX inference with IPA..." << std::endl;
+    
+    // Convert IPA phonemes directly to phoneme IDs
+    std::vector<int64_t> phoneme_ids = phonemes_to_ids(ipa_phonemes);
+    
+    if (phoneme_ids.empty()) {
+        throw std::runtime_error("Failed to convert IPA phonemes '" + ipa_phonemes + "' to phoneme IDs");
+    }
+    
+    std::cout << "Converted IPA '" << ipa_phonemes << "' → " << phoneme_ids.size() << " phoneme IDs" << std::endl;
+    
+    return run_onnx_inference(phoneme_ids);
 }
 
 std::vector<uint8_t> NeuralSynthesizer::audio_data_to_wav(const std::vector<float>& audio_data, int sample_rate) {
@@ -220,19 +312,81 @@ std::vector<int64_t> NeuralSynthesizer::text_to_phoneme_ids(const std::string& t
 }
 
 std::vector<int64_t> NeuralSynthesizer::phonemes_to_ids(const std::string& phonemes) {
-    // Simple character-to-ID mapping for testing
     std::vector<int64_t> ids;
-    ids.push_back(1); // Start token
     
-    for (char c : phonemes) {
-        if (std::isalnum(c)) {
-            ids.push_back(static_cast<int64_t>(c));
+    // Add start token
+    auto start_it = m_current_voice.phoneme_id_map.find("^");
+    if (start_it != m_current_voice.phoneme_id_map.end()) {
+        ids.push_back(start_it->second);
+    } else {
+        ids.push_back(1); // Fallback start token
+    }
+    
+    std::cout << "🔤 Converting phonemes '" << phonemes << "' to IDs..." << std::endl;
+    
+    // Convert each phoneme - need to handle UTF-8 Unicode characters properly
+    size_t i = 0;
+    while (i < phonemes.length()) {
+        // Extract the next UTF-8 character
+        std::string utf8_char;
+        size_t char_bytes = 1;
+        
+        unsigned char first_byte = phonemes[i];
+        if (first_byte < 0x80) {
+            // ASCII character (1 byte)
+            char_bytes = 1;
+        } else if ((first_byte & 0xE0) == 0xC0) {
+            // 2-byte UTF-8 character
+            char_bytes = 2;
+        } else if ((first_byte & 0xF0) == 0xE0) {
+            // 3-byte UTF-8 character
+            char_bytes = 3;
+        } else if ((first_byte & 0xF8) == 0xF0) {
+            // 4-byte UTF-8 character
+            char_bytes = 4;
+        }
+        
+        // Make sure we don't go past the end of the string
+        if (i + char_bytes > phonemes.length()) {
+            char_bytes = phonemes.length() - i;
+        }
+        
+        utf8_char = phonemes.substr(i, char_bytes);
+        
+        // Look up this UTF-8 character in the phoneme map
+        auto it = m_current_voice.phoneme_id_map.find(utf8_char);
+        if (it != m_current_voice.phoneme_id_map.end()) {
+            ids.push_back(it->second);
+            std::cout << "  '" << utf8_char << "' -> " << it->second << std::endl;
+            i += char_bytes;
         } else {
-            ids.push_back(3); // Space
+            // Try space for unknown character
+            auto space_it = m_current_voice.phoneme_id_map.find(" ");
+            if (space_it != m_current_voice.phoneme_id_map.end()) {
+                ids.push_back(space_it->second);
+                std::cout << "  '" << utf8_char << "' (unknown) -> space (" << space_it->second << ")" << std::endl;
+            } else {
+                ids.push_back(3); // Fallback space
+                std::cout << "  '" << utf8_char << "' (unknown) -> fallback space (3)" << std::endl;
+            }
+            i += char_bytes;
         }
     }
     
-    ids.push_back(2); // End token
+    // Add end token
+    auto end_it = m_current_voice.phoneme_id_map.find("$");
+    if (end_it != m_current_voice.phoneme_id_map.end()) {
+        ids.push_back(end_it->second);
+    } else {
+        ids.push_back(2); // Fallback end token
+    }
+    
+    std::cout << "  Final phoneme IDs: ";
+    for (size_t i = 0; i < ids.size(); ++i) {
+        std::cout << ids[i] << " ";
+    }
+    std::cout << std::endl;
+    
     return ids;
 }
 
@@ -241,109 +395,221 @@ std::vector<float> NeuralSynthesizer::run_onnx_inference(const std::vector<int64
         throw std::runtime_error("ONNX session not initialized");
     }
     
+    std::cout << "Starting ONNX inference with " << phoneme_ids.size() << " phoneme IDs" << std::endl;
+    std::cout << "Phoneme IDs: ";
+    for (size_t i = 0; i < phoneme_ids.size(); ++i) {
+        std::cout << phoneme_ids[i] << " ";
+    }
+    std::cout << std::endl;
+    
     try {
-        // Get input/output info
+        // Get basic model info
         Ort::AllocatorWithDefaultOptions allocator;
         size_t num_input_nodes = m_ort_session->GetInputCount();
-        size_t num_output_nodes = m_ort_session->GetOutputCount();
         
-        std::cout << "ONNX Model has " << num_input_nodes << " inputs and " << num_output_nodes << " outputs" << std::endl;
+        std::cout << "Model has " << num_input_nodes << " inputs" << std::endl;
         
-        // Print all input names for debugging
-        for (size_t i = 0; i < num_input_nodes; i++) {
-            std::string input_name(m_ort_session->GetInputNameAllocated(i, allocator).get());
-            std::cout << "Input " << i << ": " << input_name << std::endl;
+        // Piper models need 3 inputs: input, input_lengths, scales
+        if (num_input_nodes != 3) {
+            throw std::runtime_error("Expected 3 inputs for Piper model, got " + std::to_string(num_input_nodes));
         }
         
-        // Get input names - Piper typically has: input, input_lengths, scales
-        std::vector<std::string> input_names_str;
-        std::vector<const char*> input_names;
-        for (size_t i = 0; i < num_input_nodes; i++) {
-            input_names_str.push_back(m_ort_session->GetInputNameAllocated(i, allocator).get());
-            input_names.push_back(input_names_str.back().c_str());
-        }
+        // Get all input/output names - use auto to keep allocator strings alive
+        auto input0_name = m_ort_session->GetInputNameAllocated(0, allocator);
+        auto input1_name = m_ort_session->GetInputNameAllocated(1, allocator);
+        auto input2_name = m_ort_session->GetInputNameAllocated(2, allocator);
+        auto output_name = m_ort_session->GetOutputNameAllocated(0, allocator);
         
-        // Create input tensors
+        std::cout << "Input 0: " << input0_name.get() << std::endl;
+        std::cout << "Input 1: " << input1_name.get() << std::endl;
+        std::cout << "Input 2: " << input2_name.get() << std::endl;
+        std::cout << "Output: " << output_name.get() << std::endl;
+        
+        // Create input names array
+        std::vector<const char*> input_names = {
+            input0_name.get(),
+            input1_name.get(),
+            input2_name.get()
+        };
+        
+        // Create all 3 input tensors
         std::vector<Ort::Value> input_tensors;
         
-        // 1. Phoneme IDs tensor (input) - make a copy to avoid memory issues
-        std::vector<int64_t> phoneme_ids_copy = phoneme_ids;
-        std::vector<int64_t> input_shape = {1, static_cast<int64_t>(phoneme_ids_copy.size())};
+        // 1. Phoneme IDs (input)
+        std::vector<int64_t> phoneme_data = phoneme_ids; // Make copy
+        std::vector<int64_t> phoneme_shape = {1, static_cast<int64_t>(phoneme_data.size())};
         input_tensors.push_back(Ort::Value::CreateTensor<int64_t>(
-            *m_memory_info, 
-            phoneme_ids_copy.data(), 
-            phoneme_ids_copy.size(),
-            input_shape.data(), 
-            input_shape.size()
+            *m_memory_info,
+            phoneme_data.data(),
+            phoneme_data.size(),
+            phoneme_shape.data(),
+            phoneme_shape.size()
         ));
         
-        // 2. Input lengths tensor (input_lengths)
-        if (num_input_nodes > 1) {
-            std::vector<int64_t> lengths = {static_cast<int64_t>(phoneme_ids.size())};
-            std::vector<int64_t> lengths_shape = {1};
-            input_tensors.push_back(Ort::Value::CreateTensor<int64_t>(
-                *m_memory_info,
-                lengths.data(),
-                lengths.size(),
-                lengths_shape.data(),
-                lengths_shape.size()
-            ));
-        }
+        // 2. Input lengths (input_lengths) 
+        std::vector<int64_t> lengths_data = {static_cast<int64_t>(phoneme_data.size())};
+        std::vector<int64_t> lengths_shape = {1};
+        input_tensors.push_back(Ort::Value::CreateTensor<int64_t>(
+            *m_memory_info,
+            lengths_data.data(),
+            lengths_data.size(),
+            lengths_shape.data(),
+            lengths_shape.size()
+        ));
         
-        // 3. Scales tensor (noise_scale, length_scale, noise_w)
-        if (num_input_nodes > 2) {
-            std::vector<float> scales = {m_current_voice.noise_scale, m_current_voice.length_scale, m_current_voice.noise_w};
-            std::vector<int64_t> scales_shape = {3};
-            input_tensors.push_back(Ort::Value::CreateTensor<float>(
-                *m_memory_info,
-                scales.data(),
-                scales.size(),
-                scales_shape.data(),
-                scales_shape.size()
-            ));
-        }
+        // 3. Scales (scales) - noise_scale, length_scale, noise_w
+        std::cout << "🎛️  ONNX Inference using scales:" << std::endl;
+        std::cout << "   noise_scale: " << m_current_voice.noise_scale << std::endl;
+        std::cout << "   length_scale: " << m_current_voice.length_scale << std::endl;
+        std::cout << "   noise_w: " << m_current_voice.noise_w << std::endl;
         
-        // Get output names
-        std::vector<std::string> output_names_str;
-        std::vector<const char*> output_names;
-        for (size_t i = 0; i < num_output_nodes; i++) {
-            output_names_str.push_back(m_ort_session->GetOutputNameAllocated(i, allocator).get());
-            output_names.push_back(output_names_str.back().c_str());
-        }
+        std::vector<float> scales_data = {
+            m_current_voice.noise_scale,
+            m_current_voice.length_scale, 
+            m_current_voice.noise_w
+        };
+        std::vector<int64_t> scales_shape = {3};
+        input_tensors.push_back(Ort::Value::CreateTensor<float>(
+            *m_memory_info,
+            scales_data.data(),
+            scales_data.size(),
+            scales_shape.data(),
+            scales_shape.size()
+        ));
         
-        // Run inference
+        std::cout << "Created all 3 input tensors:" << std::endl;
+        std::cout << "  phonemes: [" << phoneme_shape[0] << ", " << phoneme_shape[1] << "]" << std::endl;
+        std::cout << "  lengths: [" << lengths_shape[0] << "]" << std::endl;
+        std::cout << "  scales: [" << scales_shape[0] << "]" << std::endl;
+        
+        // Run inference with all inputs
+        std::vector<const char*> output_names = {output_name.get()};
+        
         auto output_tensors = m_ort_session->Run(
-            Ort::RunOptions{nullptr}, 
-            input_names.data(), 
-            input_tensors.data(), 
-            input_tensors.size(), 
-            output_names.data(), 
-            output_names.size()
+            Ort::RunOptions{nullptr},
+            input_names.data(),
+            input_tensors.data(),
+            input_tensors.size(),
+            output_names.data(),
+            1
         );
         
-        // Extract audio data from output tensor
         if (output_tensors.empty()) {
-            throw std::runtime_error("No output from ONNX inference");
+            throw std::runtime_error("No output from inference");
         }
         
-        float* float_array = output_tensors[0].GetTensorMutableData<float>();
-        auto type_info = output_tensors[0].GetTensorTypeAndShapeInfo();
-        size_t element_count = type_info.GetElementCount();
+        // Extract the audio
+        float* output_data = output_tensors[0].GetTensorMutableData<float>();
+        auto shape_info = output_tensors[0].GetTensorTypeAndShapeInfo();
+        size_t output_size = shape_info.GetElementCount();
         
-        std::vector<float> audio_data(float_array, float_array + element_count);
+        std::cout << "📊 Extracting audio data from tensor..." << std::endl;
+        std::cout << "  Output size: " << output_size << " elements" << std::endl;
+        std::cout.flush();
         
-        std::cout << "Generated " << audio_data.size() << " audio samples via ONNX" << std::endl;
+        std::vector<float> audio_data(output_data, output_data + output_size);
+        std::cout << "📊 Audio data extracted successfully!" << std::endl;
+        std::cout.flush();
+        
+        // Debug: analyze raw ONNX output
+        if (!audio_data.empty()) {
+            auto minmax = std::minmax_element(audio_data.begin(), audio_data.end());
+            float min_val = *minmax.first;
+            float max_val = *minmax.second;
+            float peak = std::max(std::abs(min_val), std::abs(max_val));
+            
+            std::cout << "🔍 Raw ONNX output analysis:" << std::endl;
+            std::cout << "  Range: [" << min_val << ", " << max_val << "]" << std::endl;
+            std::cout << "  Peak: " << peak << std::endl;
+            
+            // Show first few samples
+            std::cout << "  First 5 samples: ";
+            for (size_t i = 0; i < std::min(size_t(5), audio_data.size()); ++i) {
+                std::cout << audio_data[i] << " ";
+            }
+            std::cout << std::endl;
+            std::cout.flush(); // Force output
+        }
+        
+        std::cout << "✅ ONNX inference successful! Generated " << audio_data.size() << " audio samples" << std::endl;
         return audio_data;
         
     } catch (const std::exception& e) {
-        std::cerr << "ONNX inference failed: " << e.what() << std::endl;
-        // Fallback to mock generation
-        const int sample_count = phoneme_ids.size() * 1000; // 1000 samples per phoneme
-        std::vector<float> audio_data(sample_count);
-        for (size_t i = 0; i < audio_data.size(); ++i) {
-            audio_data[i] = 0.1f * std::sin(2.0f * M_PI * 440.0f * i / m_current_voice.sample_rate);
+        std::cerr << "❌ ONNX inference failed: " << e.what() << std::endl;
+        throw; // Re-throw to be handled by caller
+    }
+}
+
+bool NeuralSynthesizer::load_voice_config_json(const std::string& config_path, VoiceConfig& config) {
+    std::cout << "📋 Loading JSON config: " << config_path << std::endl;
+    
+    std::ifstream file(config_path);
+    if (!file.is_open()) {
+        std::cerr << "❌ Cannot open config file: " << config_path << std::endl;
+        return false;
+    }
+    
+    // Read entire file
+    std::string json_content((std::istreambuf_iterator<char>(file)),
+                             std::istreambuf_iterator<char>());
+    file.close();
+    
+    try {
+        // Simple JSON parsing for the specific fields we need
+        // Look for "sample_rate": value
+        std::regex sample_rate_regex(R"("sample_rate"\s*:\s*(\d+))");
+        std::smatch match;
+        if (std::regex_search(json_content, match, sample_rate_regex)) {
+            config.sample_rate = std::stoi(match[1].str());
+            std::cout << "  Sample rate: " << config.sample_rate << std::endl;
         }
-        std::cout << "Generated " << audio_data.size() << " audio samples (fallback)" << std::endl;
-        return audio_data;
+        
+        // Look for inference parameters
+        std::regex noise_scale_regex(R"("noise_scale"\s*:\s*([\d.]+))");
+        if (std::regex_search(json_content, match, noise_scale_regex)) {
+            config.noise_scale = std::stof(match[1].str());
+            std::cout << "  Noise scale: " << config.noise_scale << std::endl;
+        }
+        
+        std::regex length_scale_regex(R"("length_scale"\s*:\s*([\d.]+))");
+        if (std::regex_search(json_content, match, length_scale_regex)) {
+            config.length_scale = std::stof(match[1].str());
+            std::cout << "  Length scale: " << config.length_scale << std::endl;
+        }
+        
+        std::regex noise_w_regex(R"("noise_w"\s*:\s*([\d.]+))");
+        if (std::regex_search(json_content, match, noise_w_regex)) {
+            config.noise_w = std::stof(match[1].str());
+            std::cout << "  Noise W: " << config.noise_w << std::endl;
+        }
+        
+        // Parse phoneme_id_map
+        std::regex phoneme_map_regex(R"("phoneme_id_map"\s*:\s*\{([^}]+)\})");
+        if (std::regex_search(json_content, match, phoneme_map_regex)) {
+            std::string phoneme_map_content = match[1].str();
+            
+            // Parse each phoneme mapping: "symbol": [id]
+            std::regex phoneme_entry_regex("\"([^\"]+)\"\\s*:\\s*\\[\\s*(\\d+)\\s*\\]");
+            std::sregex_iterator iter(phoneme_map_content.begin(), phoneme_map_content.end(), phoneme_entry_regex);
+            std::sregex_iterator end;
+            
+            config.phoneme_id_map.clear();
+            int phoneme_count = 0;
+            for (; iter != end; ++iter) {
+                std::string phoneme = iter->str(1);
+                int id = std::stoi(iter->str(2));
+                config.phoneme_id_map[phoneme] = id;
+                phoneme_count++;
+            }
+            
+            std::cout << "  Loaded " << phoneme_count << " phoneme mappings" << std::endl;
+        }
+        
+        std::cout << "✅ JSON config loaded successfully" << std::endl;
+        return true;
+        
+    } catch (const std::exception& e) {
+        std::cerr << "❌ Error parsing JSON config: " << e.what() << std::endl;
+        return false;
     }
 }

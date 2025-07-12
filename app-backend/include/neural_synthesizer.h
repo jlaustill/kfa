@@ -6,6 +6,7 @@
 #include <cstdint>
 #include <map>
 #include "onnxruntime_cxx_api.h"
+#include "kfa_converter.h"
 
 /**
  * Neural Speech Synthesizer using ONNX Runtime
@@ -21,6 +22,7 @@ public:
         float noise_scale = 0.667f;
         float length_scale = 1.0f;
         float noise_w = 0.8f;
+        std::map<std::string, int> phoneme_id_map;
     };
 
     NeuralSynthesizer();
@@ -47,6 +49,7 @@ public:
 private:
     bool m_initialized;
     VoiceConfig m_current_voice;
+    KfaConverter m_kfa_converter;
     
     // ONNX Runtime components
     std::unique_ptr<Ort::Env> m_ort_env;
@@ -55,9 +58,11 @@ private:
     
     // Internal helper methods
     std::vector<float> text_to_audio_data(const std::string& input);
+    std::vector<float> ipa_to_audio_data(const std::string& ipa_phonemes);
     std::vector<uint8_t> audio_data_to_wav(const std::vector<float>& audio_data, int sample_rate);
     std::vector<int64_t> text_to_phoneme_ids(const std::string& text);
     std::vector<int64_t> phonemes_to_ids(const std::string& phonemes);
+    bool load_voice_config_json(const std::string& config_path, VoiceConfig& config);
     
     // ONNX inference
     std::vector<float> run_onnx_inference(const std::vector<int64_t>& phoneme_ids);

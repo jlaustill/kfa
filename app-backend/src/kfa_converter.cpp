@@ -11,12 +11,12 @@ void KfaConverter::initialize_mappings() {
     // Core vowels (from our frontend implementation)
     m_kfa_to_ipa_map = {
         // Single vowels
-        {"u", "ə"},      // schwa - about, sofa
+        {"u", "ʌ"},      // cup sound - cup, come, love
         {"i", "ɪ"},      // short I - bit, ship
-        {"y", "iː"},     // long E - see, tree
+        {"y", "iː"},     // long E - see, tree, key
         {"E", "ɜː"},     // UR sound - bird, word
         {"a", "æ"},      // short A - cat, bat
-        {"O", "uː"},     // long U - moon, blue
+        {"O", "uː"},     // long U - moon, blue, food
         {"e", "e"},      // short E - bed, red
         {"A", "ɑː"},     // long A - car, father
         {"o", "ɔː"},     // long O - saw, caught
@@ -45,7 +45,7 @@ void KfaConverter::initialize_mappings() {
     m_ipa_to_espeak_map = {
         // Vowels
         {"ə", "@"},      {"ɪ", "I"},      {"iː", "i:"},    {"ɜː", "3:"},
-        {"æ", "{"},      {"uː", "u:"},    {"e", "E"},      {"ɑː", "A:"},
+        {"æ", "{"},      {"uː", "u:"},    {"u", "u"},      {"e", "E"},      {"ɑː", "A:"},
         {"ɔː", "O:"},    {"ʊ", "U"},      {"ʌ", "V"},      {"ɒ", "Q"},
         
         // Diphthongs
