@@ -33,7 +33,7 @@ public:
     // Synthesize text to audio data
     std::vector<uint8_t> synthesize_text(const std::string& text, const SynthesisOptions& options = {});
     
-    // Synthesize phonetic input (IPA or eSpeak format)
+    // Synthesize phonetic input (IPA format only)
     std::vector<uint8_t> synthesize_phonetic(const std::string& phonemes, const SynthesisOptions& options = {});
     
     // Get list of available voices

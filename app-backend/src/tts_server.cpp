@@ -171,15 +171,15 @@ void TTSServer::handle_speak_request(const std::string& request_body, std::strin
     }
     
     try {
-        // Convert kfa to eSpeak phonemes for neural synthesis
+        // Convert kfa to IPA phonemes for neural synthesis
         KfaConverter converter;
-        std::string espeak_text = converter.kfa_to_espeak(text);
+        std::string ipa_text = converter.kfa_to_ipa(text);
         
-        std::cout << "Input kfa: " << text << " -> eSpeak: " << espeak_text << std::endl;
+        std::cout << "Input kfa: " << text << " -> IPA: " << ipa_text << std::endl;
         
         // Synthesize using neural TTS
         SpeechSynthesizer::SynthesisOptions options;
-        std::vector<uint8_t> audio_data = synthesizer.synthesize_phonetic(espeak_text, options);
+        std::vector<uint8_t> audio_data = synthesizer.synthesize_phonetic(ipa_text, options);
         
         if (audio_data.empty()) {
             response = R"({"error": "Failed to generate audio"})";

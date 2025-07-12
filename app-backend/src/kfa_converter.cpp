@@ -40,22 +40,6 @@ void KfaConverter::initialize_mappings() {
         {"G", "ŋ"},      {"S", "ʃ"},      {"j", "j"},      {"g", "g"},
         {"J", "dʒ"},     {"c", "tʃ"},     {"Q", "θ"},      {"Z", "ʒ"}
     };
-    
-    // IPA to eSpeak mapping (for engines that prefer eSpeak format)
-    m_ipa_to_espeak_map = {
-        // Vowels
-        {"ə", "@"},      {"ɪ", "I"},      {"iː", "i:"},    {"ɜː", "3:"},
-        {"æ", "{"},      {"uː", "u:"},    {"u", "u"},      {"e", "E"},      {"ɑː", "A:"},
-        {"ɔː", "O:"},    {"ʊ", "U"},      {"ʌ", "V"},      {"ɒ", "Q"},
-        
-        // Diphthongs
-        {"eɪ", "eI"},    {"aɪ", "aI"},    {"əʊ", "@U"},    {"aʊ", "aU"},
-        {"ɪə", "I@"},    {"eə", "E@"},    {"ʊə", "U@"},    {"ɔɪ", "OI"},
-        
-        // Consonants
-        {"ð", "D"},      {"ŋ", "N"},      {"ʃ", "S"},      {"dʒ", "dZ"},
-        {"tʃ", "tS"},    {"θ", "T"},      {"ʒ", "Z"},      {"j", "j"}
-    };
 }
 
 std::string KfaConverter::kfa_to_ipa(const std::string& kfa_text) const {
@@ -91,37 +75,6 @@ std::string KfaConverter::kfa_to_ipa(const std::string& kfa_text) const {
     return result;
 }
 
-std::string KfaConverter::kfa_to_espeak(const std::string& kfa_text) const {
-    // First convert to IPA
-    std::string ipa_text = kfa_to_ipa(kfa_text);
-    
-    // Then convert IPA to eSpeak format
-    std::string result;
-    for (size_t i = 0; i < ipa_text.length(); ) {
-        bool found = false;
-        
-        // Try longer sequences first
-        for (size_t len = 3; len >= 1; --len) {
-            if (i + len <= ipa_text.length()) {
-                std::string substr = ipa_text.substr(i, len);
-                auto it = m_ipa_to_espeak_map.find(substr);
-                if (it != m_ipa_to_espeak_map.end()) {
-                    result += it->second;
-                    i += len;
-                    found = true;
-                    break;
-                }
-            }
-        }
-        
-        if (!found) {
-            result += ipa_text[i];
-            ++i;
-        }
-    }
-    
-    return result;
-}
 
 std::string KfaConverter::process_diphthongs(const std::string& text) const {
     std::string result = text;
