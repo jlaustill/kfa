@@ -8,7 +8,8 @@ This is the **kfa (QWERTY Phonetic Alphabet)** project - a text-to-speech web ap
 
 The project consists of:
 - **Root level**: Documentation and roadmap for the kfa phonetic system
-- **`/app` directory**: React + TypeScript + Vite client-side web application for testing kfa pronunciation via Web Speech API
+- **`/app` directory**: React + TypeScript + Vite client-side web application for testing kfa pronunciation
+- **`/app-backend` directory**: C++ API to provide TTS for the frontend
 
 ## Development Commands
 
@@ -19,23 +20,22 @@ npm run dev          # Start development server
 npm run build        # Build for production
 npm run lint         # Check for ESLint errors
 npm run lint:fix     # Auto-fix ESLint issues
-npm run format       # Format code with Prettier
-npm run format:check # Check Prettier formatting
+npm run prettier     # Format code with Prettier
+npm run prettier:fix # Check Prettier formatting
 npm run preview      # Preview production build
 ```
 
 **Quality checks before committing:**
 ```bash
-npm run lint && npm run format:check && npm run build
+npm run lint && npm run prettier:fix && npm run build
 ```
 
 ## Architecture & Technology Stack
 
 **Frontend Stack:**
-- **React 19** with TypeScript
+- **React** with TypeScript
 - **Vite** for build tooling and development server
 - **Material-UI (MUI)** for UI components and theming
-- **Web Speech API** for client-side text-to-speech synthesis
 - **ESLint + Prettier** for code quality and formatting
 
 **Project Structure:**
@@ -60,10 +60,10 @@ kfa/
 - Core vowels: u, i, y, E, a, O, e, A, o, U
 - Diphthongs: ey, ay, uO, au, iE, eE, UE, oUy
 - Special consonants: T (TH-this), Q (TH-thin), S (SH), Z (ZH), G (NG), J (J sound), c (CH)
+- Source of Truth(SOT or SOR) is the README.md in the roof of the project
 
 **Application Goals:**
-- 100% client-side operation (no backend required)
-- Direct kfa text → Web Speech API synthesis
+- Direct kfa text → Speech
 - Montana English pronunciation as baseline
 - Real-time pronunciation testing and validation
 
@@ -71,7 +71,7 @@ kfa/
 - Strict TypeScript configuration with explicit return types
 - ESLint with React hooks and TypeScript rules
 - Prettier for consistent formatting
-- Default exports preferred over named exports
+- Default exports preferred over named exports and only 1 thing per file period, no exceptions
 - KISS principle - simple, straightforward implementation
 - Always import types by type
 
@@ -79,18 +79,20 @@ kfa/
 
 1. **Setup**: All development happens in the `/app` directory
 2. **Code Quality**: Run `npm run lint && npm run format:check` before commits
-3. **Testing**: Use Web Speech API for immediate pronunciation validation
+3. **Testing**: 
 4. **Build**: Ensure `npm run build` passes before deployment
 5. **Architecture**: Follow the established React + MUI + TypeScript patterns
 
 ## Current State
 
-The project is in early development with a basic Vite + React setup. The roadmap outlines a comprehensive plan from basic TTS integration through complete kfa system implementation and accent variation support.
+The project is in early development with nothing setup. The roadmap outlines a comprehensive plan from basic TTS integration through complete kfa system implementation and accent variation support.
 
 ## Strict Implementation Guidelines
 
 - do NOT fall back to Web Speech API, EVER
+- do NOT mock speech, EVER if something fails, add more error handling and logging and figure out why, don't mask it
 
 ## Operational Guidance
 
-- Always delete all the files in the output_waves folder before creating new ones, ZERO EXCEPTIONS
+- When generating sample mp3's or wave files for the user to listen to and validate, always put them in an output folder for easier maintenance
+- Always delete all the files in the output folder before creating new ones, ZERO EXCEPTIONS
