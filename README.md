@@ -14,28 +14,28 @@ Unlike traditional phonetic alphabets that use special symbols, kfa constrains i
 
 ### Vowels (20 sounds)
 
-| IPA | kfa | Test Words | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
-|-----|-----|------------|-------------------|-----------|-----------|-----------|-----------|
-| ə | u | but/hut/cut | Schwa | 11.49% | about/əbaʊt/ubaut/ | sofa/səʊfə/suOfu/ | banana/bənɑːnə/bunAnu/ |
-| ɪ | i | bit/hit/kit | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
-| iː | y | beat/heat/- | Long E | 3.61% | see/siː/sy/ | tree/triː/try/ | key/kiː/ky/ |
-| ɜː | E | Bert/hurt/curt | UR sound | 2.86% | bird/bɜːd/bEd/ | word/wɜːd/wEd/ | nurse/nɜːs/nEs/ |
-| æ | a | bat/hat/cat | Short A | 2.10% | cat/kæt/kat/ | bat/bæt/bat/ | hand/hænd/hand/ |
-| uː | O | boot/hoot/coot | Long U | 1.93% | moon/muːn/mOn/ | blue/bluː/blO/ | food/fuːd/fOd/ |
-| e | e | bet/het/- | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
-| ʌ | u | but/hut/cut | Schwa-like | 1.74% | cup/kʌp/kup/ | love/lʌv/luv/ | blood/blʌd/blud/ |
-| eɪ | ey | beyt/heyt/Keyt | Long A | 1.50% | day/deɪ/dey/ | make/meɪk/meyk/ | rain/reɪn/reyn/ |
-| aɪ | ay | bayt/hayt/kayt | Long I | 1.50% | my/maɪ/may/ | time/taɪm/taym/ | fly/flaɪ/flay/ |
-| ɑː | A | bart/heart/cart | Long A | 1.45% | car/kɑːr/kAr/ | father/fɑːðər/fATuE/ | palm/pɑːm/pAlm/ |
-| ɔː | o | bought/hot/caught | Long O | 1.25% | saw/sɔː/so/ | caught/kɔːt/kot/ | bought/bɔːt/bot/ |
-| əʊ | uO | buOt/-/kuOt | Long O | 1.25% | go/gəʊ/guO/ | home/həʊm/huOm/ | boat/bəʊt/buOt/ |
-| ɒ | o | bot/hot/cot | Short O | 1.18% | hot/hɒt/hot/ | dog/dɒg/dog/ | wash/wɒʃ/woS/ |
-| aʊ | au | baut/haut/-* | OW sound | 0.50% | now/naʊ/nau/ | house/haʊs/haus/ | cloud/klaʊd/klaud/ |
-| ʊ | U | book/good/put | Short U | 0.43% | book/bʊk/bUk/ | good/gʊd/gUd/ | put/pʊt/pUt/ |
-| ɪə | iE | biE/hiE/-* | EER sound | 0.30% | here/hɪə/hiE/ | beer/bɪə/biE/ | deer/dɪə/diE/ |
-| eə | eE | beE/heE/keE | AIR sound | 0.25% | hair/heə/heE/ | care/keə/keE/ | bear/beə/beE/ |
-| ʊə | UE | bUE/- /-* | UUR sound | 0.15% | sure/ʃʊə/SUE/ | tour/tʊə/tUE/ | pure/pjʊə/pjUE/ |
-| ɔɪ | oUy | boUy/koUy/-* | OY sound | 0.10% | boy/bɔɪ/boUy/ | coin/kɔɪn/koUyn/ | voice/vɔɪs/voUys/ |
+| IPA | kfa | IPA Verified | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
+|-----|-----|--------------|-------------------|-----------|-----------|-----------|-----------|
+| ə | u | ⬜ | Schwa | 11.49% | about/əbaʊt/ubaut/ | sofa/səʊfə/suOfu/ | banana/bənɑːnə/bunAnu/ |
+| ɪ | i | ⬜ | Short I | 6.32% | bit/bɪt/bit/ | ship/ʃɪp/Sip/ | gym/dʒɪm/Jim/ |
+| iː | y | ⬜ | Long E | 3.61% | see/siː/sy/ | tree/triː/try/ | key/kiː/ky/ |
+| ɜː | E | ⬜ | UR sound | 2.86% | bird/bɜːd/bEd/ | word/wɜːd/wEd/ | nurse/nɜːs/nEs/ |
+| æ | a | ⬜ | Short A | 2.10% | cat/kæt/kat/ | bat/bæt/bat/ | hand/hænd/hand/ |
+| uː | O | ⬜ | Long U | 1.93% | moon/muːn/mOn/ | blue/bluː/blO/ | food/fuːd/fOd/ |
+| e | e | ⬜ | Short E | 1.79% | bed/bed/bed/ | red/red/red/ | bread/bred/bred/ |
+| ʌ | u | ⬜ | Schwa-like | 1.74% | cup/kʌp/kup/ | love/lʌv/luv/ | blood/blʌd/blud/ |
+| eɪ | ey | ⬜ | Long A | 1.50% | day/deɪ/dey/ | make/meɪk/meyk/ | rain/reɪn/reyn/ |
+| aɪ | ay | ⬜ | Long I | 1.50% | my/maɪ/may/ | time/taɪm/taym/ | fly/flaɪ/flay/ |
+| ɑː | A | ⬜ | Long A | 1.45% | car/kɑːr/kAr/ | father/fɑːðər/fATuE/ | palm/pɑːm/pAlm/ |
+| ɔː | o | ⬜ | Long O | 1.25% | saw/sɔː/so/ | caught/kɔːt/kot/ | bought/bɔːt/bot/ |
+| əʊ | uO | ⬜ | Long O | 1.25% | go/gəʊ/guO/ | home/həʊm/huOm/ | boat/bəʊt/buOt/ |
+| ɒ | o | ⬜ | Short O | 1.18% | hot/hɒt/hot/ | dog/dɒg/dog/ | wash/wɒʃ/woS/ |
+| aʊ | au | ⬜ | OW sound | 0.50% | now/naʊ/nau/ | house/haʊs/haus/ | cloud/klaʊd/klaud/ |
+| ʊ | U | ⬜ | Short U | 0.43% | book/bʊk/bUk/ | good/gʊd/gUd/ | put/pʊt/pUt/ |
+| ɪə | iE | ✅ | EER sound | 0.30% | here/hɪə/hiE/ | beer/bɪə/biE/ | deer/dɪə/diE/ |
+| eə | eE | ⬜ | AIR sound | 0.25% | hair/heə/heE/ | care/keə/keE/ | bear/beə/beE/ |
+| ʊə | UE | ⬜ | UUR sound | 0.15% | sure/ʃʊə/SUE/ | tour/tʊə/tUE/ | pure/pjʊə/pjUE/ |
+| ɔɪ | oUy | ⬜ | OY sound | 0.10% | boy/bɔɪ/boUy/ | coin/kɔɪn/koUyn/ | voice/vɔɪs/voUys/ |
 
 ### Consonants (24 sounds)
 

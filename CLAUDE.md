@@ -73,6 +73,7 @@ kfa/
 - Prettier for consistent formatting
 - Default exports preferred over named exports
 - KISS principle - simple, straightforward implementation
+- Always import types by type
 
 ## Development Workflow
 
@@ -85,3 +86,11 @@ kfa/
 ## Current State
 
 The project is in early development with a basic Vite + React setup. The roadmap outlines a comprehensive plan from basic TTS integration through complete kfa system implementation and accent variation support.
+
+## Strict Implementation Guidelines
+
+- do NOT fall back to Web Speech API, EVER
+
+## Operational Guidance
+
+- Always delete all the files in the output_waves folder before creating new ones, ZERO EXCEPTIONS
