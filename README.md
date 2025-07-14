@@ -161,9 +161,9 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skOr and sevun yiErz uguO aOr foTurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men or kryayted ykwul."
+> "for skor and sevun yirz ugo aOr foTurz brot forQ on Tis kontunint, u nO naysun, kunsyvd in libErty, and dedukayted tO Tu propuZiSun Tat ol men or kryayted ykwul."
 
-This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
+This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yirz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
 ## Demonstration: Eliminating English Spelling Confusion
 
@@ -171,12 +171,12 @@ This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa syste
 > "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
 
 **kfa:**
-> "wic wic iz wic? TeE at TeE haOs Ovur TeE! yOr dog eyt yOr dinur, but yOr not Sur hOz dog it waz or hOz kuming tO dinur."
+> "wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyG tO dinur."
 
 This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
 - **which/witch** = both `wic` (identical pronunciation, identical spelling)
-- **they're/their/there** = all `TeE` (same sound, same spelling)  
-- **your/you're** = both `yOr` (phonetically identical)
+- **they're/their/there** = all `Ter` (same sound, same spelling)  
+- **your/you're** = both `yuer` (phonetically identical)
 - **whose/who's** = both `hOz` (eliminates arbitrary apostrophe confusion)
 
 The kfa system represents how words actually sound, not their historical spelling accidents, making it invaluable for language learners and eliminating common English spelling confusion.
