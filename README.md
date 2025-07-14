@@ -88,9 +88,9 @@ This **phonemic approach** makes kfa practical across regional variations while 
 | aʊ | aO  | ✅ | OW sound | 0.50% | now/naʊ/naO/       | house/haʊs/haOs/     | cloud/klaʊd/klaOd/    |
 | ʊ | U   | ✅ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
 | ɪə | ir  | ✅ | EER sound | 0.30% | here/hɪə/hir/      | beer/bɪə/bir/        | deer/dɪə/dir/         |
-| eə | eE  | ⬜ | AIR sound | 0.25% | hair/heə/heE/      | care/keə/keE/        | bear/beə/beE/         |
+| eə | er  | ⬜ | AIR sound | 0.25% | hair/heə/her/      | care/keə/ker/        | bear/beə/ber/         |
 | ʊə | ur  | ✅ | UUR sound | 0.15% | sure/ʃʊə/Sur/      | cure/kjʊə/kjur/      | pure/pjʊə/pjur/       |
-| ɔɪ | uy  | ⬜ | OY sound | 0.10% | boy/bɔɪ/boUy/      | coin/kɔɪn/koUyn/     | voice/vɔɪs/voUys/     |
+| ɔɪ | oy  | ⬜ | OY sound | 0.10% | boy/bɔɪ/boy/       | coin/kɔɪn/koyn/      | voice/vɔɪs/voys/      |
 
 ### Consonants (24 sounds)
 
@@ -128,7 +128,7 @@ This **phonemic approach** makes kfa practical across regional variations while 
 **🎉 All 44 English phonemes successfully mapped using only QWERTY keyboard letters!**
 
 **Core vowels (8):** u, i, y, a, O, e, o, U  
-**Diphthong combinations (10):** ay, ey, uO, aO, ir, eE, ur, oUy  
+**Diphthong combinations (10):** ay, ey, uO, aO, ir, er, ur, oy  
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
