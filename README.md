@@ -72,9 +72,9 @@ For speakers who distinguish these sounds (primarily Eastern/International accen
 | aɪ | ey  | ✅ | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
 | ɑː | o   | ✅ | Long A | 1.45% | car/kɑːr/kor/      | father/fɑːðər/foTur/ | palm/pɑːm/polm/       |
 | ɔː | o   | ✅ | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
-| əʊ | uO  | ⬜ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
+| əʊ | uO  | ✅ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
 | ɒ | o   | ✅ | Short O | 1.18% | hot/hɒt/hot/       | dog/dɒg/dog/         | wash/wɒʃ/woS/         |
-| aʊ | au  | ⬜ | OW sound | 0.50% | now/naʊ/nau/       | house/haʊs/haus/     | cloud/klaʊd/klaud/    |
+| aʊ | aO  | ✅ | OW sound | 0.50% | now/naʊ/naO/       | house/haʊs/haOs/     | cloud/klaʊd/klaOd/    |
 | ʊ | U   | ⬜ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
 | ɪə | iE  | ⬜ | EER sound | 0.30% | here/hɪə/hiE/      | beer/bɪə/biE/        | deer/dɪə/diE/         |
 | eə | eE  | ⬜ | AIR sound | 0.25% | hair/heə/heE/      | care/keə/keE/        | bear/beə/beE/         |
@@ -100,7 +100,7 @@ For speakers who distinguish these sounds (primarily Eastern/International accen
 | w | w | W sound | 1.95% | water/wɔːtər/wotur/ | away/əweɪ/uwey/ | quick/kwɪk/kwik/ |
 | b | b | B sound | 1.80% | book/bʊk/bUk/ | table/teɪbəl/teybul/ | job/dʒɒb/Job/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fiS/ | coffee/kɒfi/kofy/ | leaf/liːf/lyf/ |
-| h | h | H sound | 1.40% | house/haʊs/haus/ | perhaps/pərhæps/purhaps/ | hello/heləʊ/heluO/ |
+| h | h | H sound | 1.40% | house/haʊs/haOs/ | perhaps/pərhæps/purhaps/ | hello/heləʊ/heluO/ |
 | ŋ | G | NG sound | 0.99% | sing/sɪŋ/siG/ | thinking/θɪŋkɪŋ/QyGkyG/ | long/lɒŋ/loG/ |
 | ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/woSyG/ | fish/fɪʃ/fiS/ |
 | j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mjOzik/ | few/fjuː/fjO/ |
@@ -117,7 +117,7 @@ For speakers who distinguish these sounds (primarily Eastern/International accen
 **🎉 All 44 English phonemes successfully mapped using only QWERTY keyboard letters!**
 
 **Core vowels (8):** u, i, y, a, O, e, o, U  
-**Diphthong combinations (10):** ay, ey, uO, au, iE, eE, UE, oUy  
+**Diphthong combinations (10):** ay, ey, uO, aO, iE, eE, UE, oUy  
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
@@ -150,7 +150,7 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skOr and sevun yiErz uguO auEr foTurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men or kryayted ykwul."
+> "for skOr and sevun yiErz uguO aOr foTurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men or kryayted ykwul."
 
 This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
@@ -160,7 +160,7 @@ This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa syste
 > "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
 
 **kfa:**
-> "wic wic iz wic? TeE at TeE haus Ovur TeE! yOr dog eyt yOr dinur, but yOr not Sur hOz dog it waz or hOz kuming tO dinur."
+> "wic wic iz wic? TeE at TeE haOs Ovur TeE! yOr dog eyt yOr dinur, but yOr not Sur hOz dog it waz or hOz kuming tO dinur."
 
 This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
 - **which/witch** = both `wic` (identical pronunciation, identical spelling)
