@@ -57,8 +57,8 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | uː | O   | ✅ | Long U | 1.93% | moon/muːn/mOn/     | blue/bluː/blO/       | food/fuːd/fOd/        |
 | e | e   | ✅ | Short E | 1.79% | bed/bed/bed/       | red/red/red/         | bread/bred/bred/      |
 | ʌ | u   | ✅ | Schwa-like | 1.74% | cup/kʌp/kup/       | love/lʌv/luv/        | blood/blʌd/blud/      |
-| eɪ | ey  | ⬜ | Long A | 1.50% | day/deɪ/dey/       | make/meɪk/meyk/      | rain/reɪn/reyn/       |
-| aɪ | ay  | ⬜ | Long I | 1.50% | my/maɪ/may/        | time/taɪm/taym/      | fly/flaɪ/flay/        |
+| eɪ | ay  | ⬜ | Long A | 1.50% | day/deɪ/day/       | make/meɪk/mayk/      | rain/reɪn/rayn/       |
+| aɪ | ey  | ⬜ | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
 | ɑː | A   | ⬜ | Long A | 1.45% | car/kɑːr/kAr/      | father/fɑːðər/fATur/ | palm/pɑːm/pAlm/       |
 | ɔː | o   | ⬜ | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
 | əʊ | uO  | ⬜ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
@@ -82,7 +82,7 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | l | l | L sound | 3.96% | love/lʌv/luv/ | yellow/jeləʊ/jeluO/ | call/kɔːl/kol/ |
 | k | k | K sound | 3.18% | key/kiː/ky/ | school/skuːl/skOl/ | book/bʊk/bUk/ |
 | ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/muTur/ | breathe/briːð/bryT/ |
-| m | m | M sound | 2.76% | man/mæn/man/ | summer/sʌmər/sumur/ | time/taɪm/taym/ |
+| m | m | M sound | 2.76% | man/mæn/man/ | summer/sʌmər/sumur/ | time/taɪm/teym/ |
 | z | z | Z sound | 2.76% | zoo/zuː/zO/ | music/mjuːzɪk/mjOzik/ | eyes/aɪz/ayz/ |
 | p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/hapy/ | cup/kʌp/kup/ |
 | v | v | V sound | 2.01% | very/veri/veri/ | river/rɪvər/rivur/ | love/lʌv/luv/ |
@@ -106,7 +106,7 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 **🎉 All 44 English phonemes successfully mapped using only QWERTY keyboard letters!**
 
 **Core vowels (9):** u, i, y, a, O, e, A, o, U  
-**Diphthong combinations (10):** ey, ay, uO, au, iE, eE, UE, oUy  
+**Diphthong combinations (10):** ay, ey, uO, au, iE, eE, UE, oUy  
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
@@ -139,9 +139,9 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skOr and sevun yiErz uguO auEr fATurz brot forQ on Tis kontinunt, u nO neysun, kunsyvd in libErty, and dedikeyted tu Tu propuzisun Tat ol men Ar kryeyted ykwul."
+> "for skOr and sevun yiErz uguO auEr fATurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men Ar kryayted ykwul."
 
-This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (fATurz), "conceived" (kunsyvd), and "created" (kryeyted) are represented through logical combinations of core vowels and consonants.
+This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (fATurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
 ## Demonstration: Eliminating English Spelling Confusion
 
