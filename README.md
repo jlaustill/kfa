@@ -4,6 +4,39 @@
 
 Unlike traditional phonetic alphabets that use special symbols, kfa constrains itself to the 52 letters (A-Z, a-z) available on any standard keyboard, making it practical for digital communication and typing.
 
+## Design Philosophy
+
+### Balancing Phonetic Precision with Practical Usability
+
+**kfa** is designed to achieve two primary goals:
+1. **Phonetic enough** that spelling bees would make zero sense (no arbitrary spelling rules)
+2. **Simple enough** that users don't need to overthink pronunciation decisions
+
+This balance is achieved through deliberate design choices that prioritize **practical phonetic representation** over academic precision.
+
+### The Schwa Decision: Simplicity Over Distinction
+
+One key example is our treatment of the schwa sound (ə) and the "strut" vowel (ʌ). In traditional IPA, these are distinct symbols representing subtly different sounds:
+
+- **banana**: /bənɑnə/ vs /bʌnɑnə/ 
+- **cup**: /kəp/ vs /kʌp/
+- **love**: /ləv/ vs /lʌv/
+
+However, for most English speakers, the acoustic difference between /ə/ and /ʌ/ is often imperceptible or contextually variable. Different speakers and even different TTS voices (like Amazon Polly's Salli vs Joanna) may pronounce these sounds differently, but the distinction requires careful listening to detect.
+
+**kfa's approach**: Always use **u** (representing schwa) for both sounds:
+- **banana**: bunanu
+- **cup**: kup  
+- **love**: luv
+
+**Benefits of this simplification**:
+- **Eliminates guesswork**: No need to decide between nearly identical sounds
+- **Maintains phonetic accuracy**: The sound is captured adequately
+- **Natural variation**: Readers will naturally produce contextual variations
+- **Consistent system**: One symbol, clear mapping
+
+This philosophy extends throughout kfa: where phonetic distinctions are too subtle for practical daily use, we choose the simpler representation that still captures the essential sound. The result is a system that's **phonetic but practical** - achieving spelling bee impossibility without requiring phonetic expertise.
+
 ## English Phonetic Reference Template
 ## 44 English Sounds with IPA and kfa Mapping
 
@@ -17,8 +50,8 @@ Unlike traditional phonetic alphabets that use special symbols, kfa constrains i
 | IPA | kfa | IPA Verified | Sound Description | Frequency | Example 1          | Example 2            | Example 3             |
 |-----|-----|--------------|-------------------|-----------|--------------------|----------------------|-----------------------|
 | ə | u   | ✅ | Schwa | 11.49% | about/əbaʊt/ubaut/ | sofa/səʊfə/suOfu/    | banana/bʌnɑnə/b^nanu/ |
-| ɪ | i   | ⬜ | Short I | 6.32% | bit/bɪt/bit/       | ship/ʃɪp/Sip/        | gym/dʒɪm/Jim/         |
-| iː | y   | ⬜ | Long E | 3.61% | see/siː/sy/        | tree/triː/try/       | key/kiː/ky/           |
+| ɪ | i   | ✅ | Short I | 6.32% | bit/bɪt/bit/       | ship/ʃɪp/Sip/        | gym/dʒɪm/Jim/         |
+| iː | y   | ✅ | Long E | 3.61% | see/siː/sy/        | tree/triː/try/       | key/kiː/ky/           |
 | ɜː | E   | ⬜ | UR sound | 2.86% | bird/bɜːd/bEd/     | word/wɜːd/wEd/       | nurse/nɜːs/nEs/       |
 | æ | a   | ⬜ | Short A | 2.10% | cat/kæt/kat/       | bat/bæt/bat/         | hand/hænd/hand/       |
 | uː | O   | ⬜ | Long U | 1.93% | moon/muːn/mOn/     | blue/bluː/blO/       | food/fuːd/fOd/        |
@@ -32,7 +65,7 @@ Unlike traditional phonetic alphabets that use special symbols, kfa constrains i
 | ɒ | o   | ⬜ | Short O | 1.18% | hot/hɒt/hot/       | dog/dɒg/dog/         | wash/wɒʃ/woS/         |
 | aʊ | au  | ⬜ | OW sound | 0.50% | now/naʊ/nau/       | house/haʊs/haus/     | cloud/klaʊd/klaud/    |
 | ʊ | U   | ⬜ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
-| ɪə | iE  | ✅ | EER sound | 0.30% | here/hɪə/hiE/      | beer/bɪə/biE/        | deer/dɪə/diE/         |
+| ɪə | iE  | ⬜ | EER sound | 0.30% | here/hɪə/hiE/      | beer/bɪə/biE/        | deer/dɪə/diE/         |
 | eə | eE  | ⬜ | AIR sound | 0.25% | hair/heə/heE/      | care/keə/keE/        | bear/beə/beE/         |
 | ʊə | UE  | ⬜ | UUR sound | 0.15% | sure/ʃʊə/SUE/      | tour/tʊə/tUE/        | pure/pjʊə/pjUE/       |
 | ɔɪ | uy  | ⬜ | OY sound | 0.10% | boy/bɔɪ/boUy/      | coin/kɔɪn/koUyn/     | voice/vɔɪs/voUys/     |
@@ -105,38 +138,3 @@ This example showcases one of kfa's most powerful features: eliminating the conf
 - **whose/who's** = both `hOz` (eliminates arbitrary apostrophe confusion)
 
 The kfa system represents how words actually sound, not their historical spelling accidents, making it invaluable for language learners and eliminating common English spelling confusion.
-
----
-
-## Design Philosophy
-
-### Balancing Phonetic Precision with Practical Usability
-
-**kfa** is designed to achieve two primary goals:
-1. **Phonetic enough** that spelling bees would make zero sense (no arbitrary spelling rules)
-2. **Simple enough** that users don't need to overthink pronunciation decisions
-
-This balance is achieved through deliberate design choices that prioritize **practical phonetic representation** over academic precision.
-
-### The Schwa Decision: Simplicity Over Distinction
-
-One key example is our treatment of the schwa sound (ə) and the "strut" vowel (ʌ). In traditional IPA, these are distinct symbols representing subtly different sounds:
-
-- **banana**: /bənɑnə/ vs /bʌnɑnə/ 
-- **cup**: /kəp/ vs /kʌp/
-- **love**: /ləv/ vs /lʌv/
-
-However, for most English speakers, the acoustic difference between /ə/ and /ʌ/ is often imperceptible or contextually variable. Different speakers and even different TTS voices (like Amazon Polly's Salli vs Joanna) may pronounce these sounds differently, but the distinction requires careful listening to detect.
-
-**kfa's approach**: Always use **u** (representing schwa) for both sounds:
-- **banana**: bunanu
-- **cup**: kup  
-- **love**: luv
-
-**Benefits of this simplification**:
-- **Eliminates guesswork**: No need to decide between nearly identical sounds
-- **Maintains phonetic accuracy**: The sound is captured adequately
-- **Natural variation**: Readers will naturally produce contextual variations
-- **Consistent system**: One symbol, clear mapping
-
-This philosophy extends throughout kfa: where phonetic distinctions are too subtle for practical daily use, we choose the simpler representation that still captures the essential sound. The result is a system that's **phonetic but practical** - achieving spelling bee impossibility without requiring phonetic expertise.
