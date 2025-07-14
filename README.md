@@ -48,6 +48,17 @@ kfa is designed around **Western American English** pronunciation patterns, whic
 
 For speakers who distinguish these sounds (primarily Eastern/International accents), unused uppercase letters could provide alternative mappings while preserving the core Western American system.
 
+### Phonemic vs Phonetic Distinction
+
+kfa prioritizes **meaning-making sound differences** over academic phonetic precision. The guiding principle: if changing a sound creates a different word, it needs a different symbol. If it's just an accent variation of the same word, one symbol works.
+
+**Examples:**
+- **bat vs bot**: Different words → need different symbols (a vs o)
+- **car, saw, hot**: Same vowel sound in Western American → all use "o"  
+- **buk vs bUk**: Different words (buck vs book) → need different symbols (u vs U)
+
+This **phonemic approach** makes kfa practical across regional variations while maintaining essential word distinctions.
+
 ## English Phonetic Reference Template
 ## 44 English Sounds with IPA and kfa Mapping
 
@@ -75,7 +86,7 @@ For speakers who distinguish these sounds (primarily Eastern/International accen
 | əʊ | uO  | ✅ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
 | ɒ | o   | ✅ | Short O | 1.18% | hot/hɒt/hot/       | dog/dɒg/dog/         | wash/wɒʃ/woS/         |
 | aʊ | aO  | ✅ | OW sound | 0.50% | now/naʊ/naO/       | house/haʊs/haOs/     | cloud/klaʊd/klaOd/    |
-| ʊ | U   | ⬜ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
+| ʊ | U   | ✅ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
 | ɪə | iE  | ⬜ | EER sound | 0.30% | here/hɪə/hiE/      | beer/bɪə/biE/        | deer/dɪə/diE/         |
 | eə | eE  | ⬜ | AIR sound | 0.25% | hair/heə/heE/      | care/keə/keE/        | bear/beə/beE/         |
 | ʊə | UE  | ⬜ | UUR sound | 0.15% | sure/ʃʊə/SUE/      | tour/tʊə/tUE/        | pure/pjʊə/pjUE/       |
