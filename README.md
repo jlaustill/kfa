@@ -57,8 +57,8 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | uː | O   | ✅ | Long U | 1.93% | moon/muːn/mOn/     | blue/bluː/blO/       | food/fuːd/fOd/        |
 | e | e   | ✅ | Short E | 1.79% | bed/bed/bed/       | red/red/red/         | bread/bred/bred/      |
 | ʌ | u   | ✅ | Schwa-like | 1.74% | cup/kʌp/kup/       | love/lʌv/luv/        | blood/blʌd/blud/      |
-| eɪ | ay  | ⬜ | Long A | 1.50% | day/deɪ/day/       | make/meɪk/mayk/      | rain/reɪn/rayn/       |
-| aɪ | ey  | ⬜ | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
+| eɪ | ay  | ✅ | Long A | 1.50% | day/deɪ/day/       | make/meɪk/mayk/      | rain/reɪn/rayn/       |
+| aɪ | ey  | ✅ | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
 | ɑː | A   | ⬜ | Long A | 1.45% | car/kɑːr/kAr/      | father/fɑːðər/fATur/ | palm/pɑːm/pAlm/       |
 | ɔː | o   | ⬜ | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
 | əʊ | uO  | ⬜ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
