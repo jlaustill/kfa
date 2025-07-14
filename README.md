@@ -53,9 +53,9 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | ɪ | i   | ✅ | Short I | 6.32% | bit/bɪt/bit/       | ship/ʃɪp/Sip/        | gym/dʒɪm/Jim/         |
 | iː | y   | ✅ | Long E | 3.61% | see/siː/sy/        | tree/triː/try/       | key/kiː/ky/           |
 | ɜː | ur  | ✅ | UR sound | 2.86% | bird/bɜːd/burd/    | word/wɜːd/wurd/      | nurse/nɜːs/nurs/      |
-| æ | a   | ⬜ | Short A | 2.10% | cat/kæt/kat/       | bat/bæt/bat/         | hand/hænd/hand/       |
-| uː | O   | ⬜ | Long U | 1.93% | moon/muːn/mOn/     | blue/bluː/blO/       | food/fuːd/fOd/        |
-| e | e   | ⬜ | Short E | 1.79% | bed/bed/bed/       | red/red/red/         | bread/bred/bred/      |
+| æ | a   | ✅ | Short A | 2.10% | cat/kæt/kat/       | bat/bæt/bat/         | hand/hænd/hand/       |
+| uː | O   | ✅ | Long U | 1.93% | moon/muːn/mOn/     | blue/bluː/blO/       | food/fuːd/fOd/        |
+| e | e   | ✅ | Short E | 1.79% | bed/bed/bed/       | red/red/red/         | bread/bred/bred/      |
 | ʌ | u   | ✅ | Schwa-like | 1.74% | cup/kʌp/kup/       | love/lʌv/luv/        | blood/blʌd/blud/      |
 | eɪ | ey  | ⬜ | Long A | 1.50% | day/deɪ/dey/       | make/meɪk/meyk/      | rain/reɪn/reyn/       |
 | aɪ | ay  | ⬜ | Long I | 1.50% | my/maɪ/may/        | time/taɪm/taym/      | fly/flaɪ/flay/        |
@@ -110,6 +110,26 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
+
+## Unused QWERTY Characters
+
+The following standard QWERTY letters remain unused in the kfa system, providing room for future expansion or dialect variations:
+
+**Uppercase unused (17):** B, C, D, E, F, H, I, K, L, M, N, P, R, V, W, X, Y  
+**Lowercase unused (2):** q, x
+
+These unused characters could potentially be allocated for:
+- Regional accent variations (British, Australian, etc.)
+- Stress marking or tone indicators  
+- Non-English phonemes for multilingual support
+- Alternative pronunciations or phoneme variants
+
+**Example: Spanish language extension**
+- **R** = rolled/trilled r ("perro" → peRo)
+- **N** = ñ palatal nasal ("niño" → nyNo) 
+- **X** = Spanish j sound ("joven" → Xoven)
+
+This would enable bilingual phonetic literacy with minimal additional complexity.
 
 ---
 
