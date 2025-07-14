@@ -37,6 +37,17 @@ However, for most English speakers, the acoustic difference between /ə/ and /ʌ
 
 This philosophy extends throughout kfa: where phonetic distinctions are too subtle for practical daily use, we choose the simpler representation that still captures the essential sound. The result is a system that's **phonetic but practical** - achieving spelling bee impossibility without requiring phonetic expertise.
 
+### Regional Accent Considerations
+
+kfa is designed around **Western American English** pronunciation patterns, which reflect how millions of Americans actually speak. A key example is the **low back merger**, where sounds like /ɑː/ (car), /ɔː/ (caught), and /ɒ/ (hot) are pronounced identically as a single vowel sound.
+
+**kfa approach**: All three sounds use **o**:
+- **car, father, palm**: kor, foTur, polm
+- **saw, caught, bought**: so, kot, bot  
+- **hot, dog, wash**: hot, dog, woS
+
+For speakers who distinguish these sounds (primarily Eastern/International accents), unused uppercase letters could provide alternative mappings while preserving the core Western American system.
+
 ## English Phonetic Reference Template
 ## 44 English Sounds with IPA and kfa Mapping
 
@@ -59,10 +70,10 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | ʌ | u   | ✅ | Schwa-like | 1.74% | cup/kʌp/kup/       | love/lʌv/luv/        | blood/blʌd/blud/      |
 | eɪ | ay  | ✅ | Long A | 1.50% | day/deɪ/day/       | make/meɪk/mayk/      | rain/reɪn/rayn/       |
 | aɪ | ey  | ✅ | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
-| ɑː | A   | ⬜ | Long A | 1.45% | car/kɑːr/kAr/      | father/fɑːðər/fATur/ | palm/pɑːm/pAlm/       |
-| ɔː | o   | ⬜ | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
+| ɑː | o   | ✅ | Long A | 1.45% | car/kɑːr/kor/      | father/fɑːðər/foTur/ | palm/pɑːm/polm/       |
+| ɔː | o   | ✅ | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
 | əʊ | uO  | ⬜ | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
-| ɒ | o   | ⬜ | Short O | 1.18% | hot/hɒt/hot/       | dog/dɒg/dog/         | wash/wɒʃ/woS/         |
+| ɒ | o   | ✅ | Short O | 1.18% | hot/hɒt/hot/       | dog/dɒg/dog/         | wash/wɒʃ/woS/         |
 | aʊ | au  | ⬜ | OW sound | 0.50% | now/naʊ/nau/       | house/haʊs/haus/     | cloud/klaʊd/klaud/    |
 | ʊ | U   | ⬜ | Short U | 0.43% | book/bʊk/bUk/      | good/gʊd/gUd/        | put/pʊt/pUt/          |
 | ɪə | iE  | ⬜ | EER sound | 0.30% | here/hɪə/hiE/      | beer/bɪə/biE/        | deer/dɪə/diE/         |
@@ -75,7 +86,7 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | IPA | kfa | Sound Description | Frequency | Example 1 | Example 2 | Example 3 |
 |-----|-----|-------------------|-----------|-----------|-----------|-----------|
 | n | n | N sound | 7.11% | no/nəʊ/nuO/ | dinner/dɪnər/dinur/ | sun/sʌn/sun/ |
-| r | r | R sound | 6.94% | red/red/red/ | sorry/sɒri/sory/ | car/kɑːr/kAr/ |
+| r | r | R sound | 6.94% | red/red/red/ | sorry/sɒri/sory/ | car/kɑːr/kor/ |
 | t | t | T sound | 6.91% | ten/ten/ten/ | better/betər/betur/ | cat/kæt/kat/ |
 | s | s | S sound | 4.75% | sun/sʌn/sun/ | lesson/lesən/lesun/ | bus/bʌs/bus/ |
 | d | d | D sound | 4.21% | dog/dɒg/dog/ | ladder/lædər/ladur/ | red/red/red/ |
@@ -96,7 +107,7 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 | g | g | G sound | 0.80% | go/gəʊ/guO/ | bigger/bɪgər/bigur/ | bag/bæg/bag/ |
 | dʒ | J | J sound | 0.59% | jump/dʒʌmp/Jump/ | magic/mædʒɪk/maJik/ | bridge/brɪdʒ/briJ/ |
 | tʃ | c | CH sound | 0.56% | chair/tʃeər/cur/ | teacher/tiːtʃər/tycur/ | watch/wɒtʃ/woc/ |
-| θ | Q | TH (thin) | 0.41% | think/θɪŋk/QyGk/ | nothing/nʌθɪŋ/nuQyG/ | path/pɑːθ/pAQ/ |
+| θ | Q | TH (thin) | 0.41% | think/θɪŋk/QyGk/ | nothing/nʌθɪŋ/nuQyG/ | path/pɑːθ/paQ/ |
 | ʒ | Z | ZH sound | 0.07% | pleasure/pleʒər/pleZur/ | vision/vɪʒən/viZun/ | beige/beɪʒ/beyZ/ |
 
 ---
@@ -105,7 +116,7 @@ This philosophy extends throughout kfa: where phonetic distinctions are too subt
 
 **🎉 All 44 English phonemes successfully mapped using only QWERTY keyboard letters!**
 
-**Core vowels (9):** u, i, y, a, O, e, A, o, U  
+**Core vowels (8):** u, i, y, a, O, e, o, U  
 **Diphthong combinations (10):** ay, ey, uO, au, iE, eE, UE, oUy  
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
@@ -139,9 +150,9 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skOr and sevun yiErz uguO auEr fATurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men Ar kryayted ykwul."
+> "for skOr and sevun yiErz uguO auEr foTurz brot forQ on Tis kontinunt, u nO naysun, kunsyvd in libErty, and dedikayted tu Tu propuzisun Tat ol men or kryayted ykwul."
 
-This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (fATurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
+This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yiErz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
 ## Demonstration: Eliminating English Spelling Confusion
 
