@@ -112,13 +112,13 @@ This **phonemic approach** makes kfa practical across regional variations while 
 | b | b | B sound | 1.80% | book/bʊk/bUk/ | table/teɪbəl/taybul/ | job/dʒɒb/Job/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fiS/ | coffee/kɒfi/kofy/ | leaf/liːf/lyf/ |
 | h | h | H sound | 1.40% | house/haʊs/haOs/ | perhaps/pərhæps/purhaps/ | hello/heləʊ/heluO/ |
-| ŋ | G | NG sound | 0.99% | sing/sɪŋ/syG/ | thinking/θɪŋkɪŋ/QyGkyG/ | long/lɒŋ/loG/ |
+| ŋ | G | NG sound | 0.99% | sing/sɪŋ/syG/ | thinking/θɪŋkɪŋ/TyGkyG/ | long/lɒŋ/loG/ |
 | ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/woSyG/ | fish/fɪʃ/fiS/ |
 | j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mjOzik/ | few/fjuː/fjO/ |
 | g | g | G sound | 0.80% | go/gəʊ/guO/ | bigger/bɪgər/bigur/ | bag/bæg/bag/ |
 | dʒ | J | J sound | 0.59% | jump/dʒʌmp/Jump/ | magic/mædʒɪk/maJik/ | bridge/brɪdʒ/briJ/ |
 | tʃ | c | CH sound | 0.56% | chair/tʃeər/cer/ | teacher/tiːtʃər/tycer/ | watch/wɒtʃ/woc/ |
-| θ | Q | TH (thin) | 0.41% | think/θɪŋk/QyGk/ | nothing/nʌθɪŋ/nuQyG/ | path/pɑːθ/paQ/ |
+| θ | T | TH (thin) | 0.41% | think/θɪŋk/TyGk/ | nothing/nʌθɪŋ/nuTyG/ | path/pɑːθ/paT/ |
 | ʒ | Z | ZH sound | 0.07% | pleasure/pleʒər/pleZur/ | vision/vɪʒən/viZun/ | measure/meʒər/meZur/ |
 
 ---
@@ -137,7 +137,7 @@ The kfa system elegantly represents complex sounds as logical combinations of co
 
 The following standard QWERTY letters remain unused in the kfa system, providing room for future expansion or dialect variations:
 
-**Uppercase unused (17):** B, C, D, E, F, H, I, K, L, M, N, P, R, V, W, X, Y  
+**Uppercase unused (17):** B, C, D, E, F, H, I, K, L, M, N, P, Q, R, V, W, X, Y  
 **Lowercase unused (2):** q, x
 
 These unused characters could potentially be allocated for:
@@ -161,7 +161,7 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skor and sevun yirz ugo aOr foTurz brot forQ on Tis kontunint, u nO naysun, kunsyvd in libErty, and dedukayted tO Tu propuZiSun Tat ol men or kryayted ykwul."
+> "for skor and sevun yirz ugo aOr foTurz brot forT on Tis kontunint, u nO naysun, kunsyvd in libErty, and dedukayted tO Tu propuZiSun Tat ol men or kryayted ykwul."
 
 This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yirz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
