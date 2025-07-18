@@ -46,6 +46,7 @@ function App() {
     }
   };
 
+  /* Hidden for now - focusing on English → IPA → kfa flow
   const handleTranslateFromIPA = async () => {
     if (!ipaText.trim()) return;
     
@@ -72,7 +73,9 @@ function App() {
       setIsTranslating(false);
     }
   };
+  */
 
+  /* Hidden for now - focusing on English → IPA → kfa flow
   const handleTranslateFromKFA = async () => {
     if (!kfaText.trim()) return;
     
@@ -99,6 +102,7 @@ function App() {
       setIsTranslating(false);
     }
   };
+  */
 
   const readmeContent = `# kfa - QWERTY Phonetic Alphabet
 
@@ -305,6 +309,7 @@ The kfa system represents how words actually sound, not their historical spellin
                     placeholder="Enter IPA text here..."
                     sx={{ mb: 2 }}
                   />
+                  {/* Hidden for now - focusing on English → IPA → kfa flow
                   <Button
                     variant="contained"
                     onClick={handleTranslateFromIPA}
@@ -313,6 +318,7 @@ The kfa system represents how words actually sound, not their historical spellin
                   >
                     {isTranslating ? 'Translating...' : 'Translate to English & kfa'}
                   </Button>
+                  */}
                 </CardContent>
               </Card>
 
@@ -331,6 +337,7 @@ The kfa system represents how words actually sound, not their historical spellin
                     placeholder="Enter kfa text here..."
                     sx={{ mb: 2 }}
                   />
+                  {/* Hidden for now - focusing on English → IPA → kfa flow
                   <Button
                     variant="contained"
                     onClick={handleTranslateFromKFA}
@@ -339,6 +346,7 @@ The kfa system represents how words actually sound, not their historical spellin
                   >
                     {isTranslating ? 'Translating...' : 'Translate to English & IPA'}
                   </Button>
+                  */}
                 </CardContent>
               </Card>
             </Box>
