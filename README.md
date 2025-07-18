@@ -80,7 +80,7 @@ This **phonemic approach** makes kfa practical across regional variations while 
 | e | e   | Short E | 1.79% | bed/bed/bed/       | red/red/red/         | bread/bred/bred/      |
 | ʌ | u   | Schwa-like | 1.74% | cup/kʌp/kup/       | love/lʌv/luv/        | blood/blʌd/blud/      |
 | eɪ | ay  | Long A | 1.50% | day/deɪ/day/       | make/meɪk/mayk/      | rain/reɪn/rayn/       |
-| aɪ | ey  | Long I | 1.50% | my/maɪ/mey/        | time/taɪm/teym/      | fly/flaɪ/fley/        |
+| aɪ | uy  | Long I | 1.50% | my/maɪ/muy/        | time/taɪm/tuym/      | fly/flaɪ/fluy/        |
 | ɑː | o   | Long A | 1.45% | car/kɑːr/kor/      | father/fɑːðər/foTur/ | palm/pɑːm/polm/       |
 | ɔː | o   | Long O | 1.25% | saw/sɔː/so/        | caught/kɔːt/kot/     | bought/bɔːt/bot/      |
 | əʊ | uO  | Long O | 1.25% | go/gəʊ/guO/        | home/həʊm/huOm/      | boat/bəʊt/buOt/       |
@@ -104,7 +104,7 @@ This **phonemic approach** makes kfa practical across regional variations while 
 | l | l | L sound | 3.96% | love/lʌv/luv/ | yellow/jeləʊ/jeluO/ | call/kɔːl/kol/ |
 | k | k | K sound | 3.18% | key/kiː/ky/ | school/skuːl/skOl/ | book/bʊk/bUk/ |
 | ð | T | TH (this) | 2.95% | this/ðɪs/Tis/ | mother/mʌðər/muTur/ | breathe/briːð/bryT/ |
-| m | m | M sound | 2.76% | man/mæn/man/ | summer/sʌmər/sumur/ | time/taɪm/teym/ |
+| m | m | M sound | 2.76% | man/mæn/man/ | summer/sʌmər/sumur/ | time/taɪm/tuym/ |
 | z | z | Z sound | 2.76% | zoo/zuː/zO/ | music/mjuːzɪk/mjOzik/ | eyes/ɔɪz/oyz/ |
 | p | p | P sound | 2.15% | pen/pen/pen/ | happy/hæpi/hapy/ | cup/kʌp/kup/ |
 | v | v | V sound | 2.01% | very/veri/very/ | river/rɪvər/rivur/ | love/lʌv/luv/ |
@@ -128,10 +128,20 @@ This **phonemic approach** makes kfa practical across regional variations while 
 **🎉 All 44 English phonemes successfully mapped using only QWERTY keyboard letters!**
 
 **Core vowels (8):** u, i, y, a, O, e, o, U  
-**Diphthong combinations (10):** ay, ey, uO, aO, ir, er, ur, oy  
+**Diphthong combinations (10):** ay, uy, uO, aO, ir, er, ur, oy  
 **All consonants (24):** Complete mapping using intuitive letter assignments
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
+
+## Word Boundaries and Spacing
+
+**kfa uses the same word boundary rules as English**: words are separated by whitespace (spaces, tabs, newlines). This makes kfa text immediately readable and typeable without special formatting requirements.
+
+**Examples:**
+- **English**: "Hello world, how are you?"
+- **kfa**: "heluO wurld, haO or yO?"
+
+Punctuation and capitalization follow standard English conventions, making kfa text natural to read and write in any text editor or digital communication platform.
 
 ## Unused QWERTY Characters
 
@@ -161,7 +171,7 @@ This would enable bilingual phonetic literacy with minimal additional complexity
 > "Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal."
 
 **kfa:**
-> "for skor and sevun yirz ugo aOr foTurz brot forT on Tis kontunint, u nO naysun, kunsyvd in libErty, and dedukayted tO Tu propuZiSun Tat ol men or kryayted ykwul."
+> "for skor and sevun yirz ugo aOr foTurz brot forT on Tis kontunint, u nO naysun, kunsyvd in libirty, and dedukayted tO Tu propuZiSun Tat ol men or kryayted ykwul."
 
 This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa system's natural readability and comprehensive coverage of English phonemes. Notice how complex sounds like "years" (yirz), "fathers" (foTurz), "conceived" (kunsyvd), and "created" (kryayted) are represented through logical combinations of core vowels and consonants.
 
