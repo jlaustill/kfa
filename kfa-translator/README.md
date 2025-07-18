@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# kfa Translator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web application for translating English text to the kfa (QWERTY Phonetic Alphabet) system.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application provides real-time translation between English, IPA (International Phonetic Alphabet), and kfa phonetic representations. It uses a comprehensive 123,000+ word dictionary with American English pronunciation prioritization.
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-time translation** between English ↔ IPA ↔ kfa
+- **Tokenization-based processing** for accurate word boundary handling
+- **American pronunciation priority** using structured JSON dictionary
+- **Unknown word bracketing** for missing dictionary entries
+- **Comprehensive phoneme mapping** including stress marks and variants
+- **Clean 2-column interface** for easy comparison
 
-```js
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+## Core kfa Mappings
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+The application maps all 44 English phonemes using only QWERTY characters:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+**Consonant highlights:**
+- `ng` → NG sound (sing, thinking, long)
+- `T` → TH sounds (think, this)  
+- `S` → SH sound (ship, washing)
+- `Z` → ZH sound (pleasure, vision)
+- `J` → J sound (jump, magic)
+- `c` → CH sound (chair, teacher)
+
+**Vowel patterns:**
+- Core vowels: u, i, y, a, O, e, o, U
+- Diphthongs: ay, uy, uO, aO, ir, er, ur, oy
+
+## Development
+
+```bash
+npm install      # Install dependencies
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run lint     # Check for linting errors
+npm run preview  # Preview production build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Dictionary Management
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default tseslint.config([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+The application uses `/public/data/ipadict.json` with structure:
+```json
+{
+  "word": [
+    {"ipa": "pronunciation", "priority": 1, "region": "american"},
+    {"ipa": "variant", "priority": 2, "region": "british"}
+  ]
+}
 ```
+
+Use `scripts/convertDictionary.cjs` to convert from tab-separated format to structured JSON.

@@ -30,10 +30,10 @@ const IPA_TO_KFA_MAP = new Map<string, string>([
   ['wɚ', 'wur'], // R-colored schwa with w (work)
   ['ɚ', 'ur'],   // R-colored schwa (general)
   ['ə', 'u'],    // Schwa (about)
-  ['ɪŋ', 'yG'],  // -ing ending with short i (exciting, seeing)
-  ['iŋ', 'yG'],  // -ing ending with long i (breathtaking)
-  ['li', 'ly'],  // Word-final -ly ending (practically)
+  ['ɪŋ', 'yng'], // -ing ending with short i (exciting, seeing)
+  ['iŋ', 'yng'], // -ing ending with long i (breathtaking)
   ['ɪ', 'i'],    // Short I (bit)
+  ['i', 'y'],    // Long E (any, happy, see)
   ['sɪˈ', 'sy'], // Short I with s and stress (simply)
   ['æ', 'a'],    // Short A (cat)
   ['e', 'e'],    // Short E (bed)
@@ -53,7 +53,7 @@ const IPA_TO_KFA_MAP = new Map<string, string>([
   ['ʒ', 'Z'],    // ZH sound (pleasure)
   ['θ', 'T'],    // TH thin (think)
   ['ð', 'T'],    // TH this (this)
-  ['ŋ', 'G'],    // NG sound (sing)
+  ['ŋ', 'ng'],   // NG sound (sing)
   ['n', 'n'],    // N sound
   ['r', 'r'],    // R sound
   ['ɹ', 'r'],    // R sound variant
