@@ -11,11 +11,12 @@ import {
 } from "@mui/material";
 import { useState, useRef } from "react";
 import TranslationService from "./services/translationService";
+import type { IEnhancedTranslationResult } from "./types";
+import EnhancedTranslationDisplay from "./components/EnhancedTranslationDisplay";
 
 function App() {
   const [englishText, setEnglishText] = useState("");
-  const [ipaText, setIpaText] = useState("");
-  const [kfaText, setKfaText] = useState("");
+  const [enhancedResult, setEnhancedResult] = useState<IEnhancedTranslationResult | null>(null);
   const [isTranslating, setIsTranslating] = useState(false);
   const translationService = useRef(new TranslationService()).current;
 
@@ -24,26 +25,34 @@ function App() {
     
     setIsTranslating(true);
     try {
-      const results = await translationService.translateText(englishText, 'english');
-      
-      if (results.ipa.success) {
-        setIpaText(results.ipa.result);
-      } else {
-        setIpaText(`Error: ${results.ipa.error}`);
-      }
-      
-      if (results.kfa.success) {
-        setKfaText(results.kfa.result);
-      } else {
-        setKfaText(`Error: ${results.kfa.error}`);
-      }
+      const result = await translationService.translateEnglishToEnhanced(englishText);
+      setEnhancedResult(result);
     } catch (error) {
       console.error('Translation error:', error);
-      setIpaText('Translation failed');
-      setKfaText('Translation failed');
+      setEnhancedResult({
+        success: false,
+        words: [],
+        errors: ['Translation failed']
+      });
     } finally {
       setIsTranslating(false);
     }
+  };
+
+  const handleWordPronunciationChange = (wordIndex: number, newPronunciationIndex: number) => {
+    if (!enhancedResult) return;
+    
+    // Create a deep copy of the result
+    const newResult = {
+      ...enhancedResult,
+      words: enhancedResult.words.map((word, index) => 
+        index === wordIndex 
+          ? { ...word, selectedPronunciation: newPronunciationIndex }
+          : word
+      )
+    };
+    
+    setEnhancedResult(newResult);
   };
 
   /* Hidden for now - focusing on English → IPA → kfa flow
@@ -297,56 +306,76 @@ The kfa system represents how words actually sound, not their historical spellin
               {/* IPA Section */}
               <Card>
                 <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    IPA (International Phonetic Alphabet)
-                  </Typography>
-                  <TextField
-                    fullWidth
-                    multiline
-                    rows={4}
-                    value={ipaText}
-                    onChange={(e) => setIpaText(e.target.value)}
-                    placeholder="Enter IPA text here..."
-                    sx={{ mb: 2 }}
-                  />
-                  {/* Hidden for now - focusing on English → IPA → kfa flow
-                  <Button
-                    variant="contained"
-                    onClick={handleTranslateFromIPA}
-                    fullWidth
-                    disabled={isTranslating || !ipaText.trim()}
-                  >
-                    {isTranslating ? 'Translating...' : 'Translate to English & kfa'}
-                  </Button>
-                  */}
+                  {enhancedResult ? (
+                    <EnhancedTranslationDisplay
+                      result={enhancedResult}
+                      format="ipa"
+                      title="IPA (International Phonetic Alphabet)"
+                      onWordPronunciationChange={handleWordPronunciationChange}
+                    />
+                  ) : (
+                    <>
+                      <Typography variant="h6" gutterBottom>
+                        IPA (International Phonetic Alphabet)
+                      </Typography>
+                      <Box
+                        sx={{
+                          minHeight: '120px',
+                          padding: 2,
+                          border: '1px solid',
+                          borderColor: 'divider',
+                          borderRadius: 1,
+                          backgroundColor: 'grey.50',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: 'text.secondary'
+                        }}
+                      >
+                        <Typography variant="body2">
+                          Enter English text above and click "Translate to IPA & kfa" to see IPA transcription
+                        </Typography>
+                      </Box>
+                    </>
+                  )}
                 </CardContent>
               </Card>
 
               {/* kfa Section */}
               <Card>
                 <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    kfa (QWERTY Phonetic Alphabet)
-                  </Typography>
-                  <TextField
-                    fullWidth
-                    multiline
-                    rows={4}
-                    value={kfaText}
-                    onChange={(e) => setKfaText(e.target.value)}
-                    placeholder="Enter kfa text here..."
-                    sx={{ mb: 2 }}
-                  />
-                  {/* Hidden for now - focusing on English → IPA → kfa flow
-                  <Button
-                    variant="contained"
-                    onClick={handleTranslateFromKFA}
-                    fullWidth
-                    disabled={isTranslating || !kfaText.trim()}
-                  >
-                    {isTranslating ? 'Translating...' : 'Translate to English & IPA'}
-                  </Button>
-                  */}
+                  {enhancedResult ? (
+                    <EnhancedTranslationDisplay
+                      result={enhancedResult}
+                      format="kfa"
+                      title="kfa (QWERTY Phonetic Alphabet)"
+                      onWordPronunciationChange={handleWordPronunciationChange}
+                    />
+                  ) : (
+                    <>
+                      <Typography variant="h6" gutterBottom>
+                        kfa (QWERTY Phonetic Alphabet)
+                      </Typography>
+                      <Box
+                        sx={{
+                          minHeight: '120px',
+                          padding: 2,
+                          border: '1px solid',
+                          borderColor: 'divider',
+                          borderRadius: 1,
+                          backgroundColor: 'grey.50',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          color: 'text.secondary'
+                        }}
+                      >
+                        <Typography variant="body2">
+                          Enter English text above and click "Translate to IPA & kfa" to see kfa phonetic spelling
+                        </Typography>
+                      </Box>
+                    </>
+                  )}
                 </CardContent>
               </Card>
             </Box>

@@ -1,6 +1,6 @@
 import DictionaryLoader from "../utils/dictionaryLoader";
 import { translateIpaToKfa, translateKfaToIpa } from "../utils/ipaToKfa";
-import type { ITranslationResult } from "../types";
+import type { ITranslationResult, IEnhancedTranslationResult } from "../types";
 
 export class TranslationService {
   private dictionary: DictionaryLoader;
@@ -76,6 +76,12 @@ export class TranslationService {
       result: englishResult.result,
       error: englishResult.error || ipaResult.error
     };
+  }
+
+  // Enhanced translation with pronunciation options
+  async translateEnglishToEnhanced(text: string): Promise<IEnhancedTranslationResult> {
+    if (!this.initialized) await this.initialize();
+    return this.dictionary.translateEnglishPhraseToEnhanced(text);
   }
 
   // Helper method to translate from any format to the other two
