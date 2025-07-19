@@ -112,13 +112,13 @@ This **phonemic approach** makes kfa practical across regional variations while 
 | b | b | B sound | 1.80% | book/bʊk/bUk/ | table/teɪbəl/taybul/ | job/dʒɒb/Job/ |
 | f | f | F sound | 1.71% | fish/fɪʃ/fiS/ | coffee/kɒfi/kofy/ | leaf/liːf/lyf/ |
 | h | h | H sound | 1.40% | house/haʊs/haOs/ | perhaps/pərhæps/purhaps/ | hello/heləʊ/heluO/ |
-| ŋ | G | NG sound | 0.99% | sing/sɪŋ/syG/ | thinking/θɪŋkɪŋ/TyGkyG/ | long/lɒŋ/loG/ |
-| ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/woSyG/ | fish/fɪʃ/fiS/ |
+| ŋ | ng | NG sound | 0.99% | sing/sɪŋ/syng/ | thinking/θɪŋkɪŋ/Tyngkyng/ | long/lɒŋ/long/ |
+| ʃ | S | SH sound | 0.97% | ship/ʃɪp/Sip/ | washing/wɒʃɪŋ/woSyng/ | fish/fɪʃ/fiS/ |
 | j | j | Y sound | 0.81% | yes/jes/jes/ | music/mjuːzɪk/mjOzik/ | few/fjuː/fjO/ |
 | g | g | G sound | 0.80% | go/gəʊ/guO/ | bigger/bɪgər/bigur/ | bag/bæg/bag/ |
 | dʒ | J | J sound | 0.59% | jump/dʒʌmp/Jump/ | magic/mædʒɪk/maJik/ | bridge/brɪdʒ/briJ/ |
 | tʃ | c | CH sound | 0.56% | chair/tʃeər/cer/ | teacher/tiːtʃər/tycer/ | watch/wɒtʃ/woc/ |
-| θ | T | TH (thin) | 0.41% | think/θɪŋk/TyGk/ | nothing/nʌθɪŋ/nuTyG/ | path/pɑːθ/paT/ |
+| θ | T | TH (thin) | 0.41% | think/θɪŋk/Tyngk/ | nothing/nʌθɪŋ/nuTyng/ | path/pɑːθ/paT/ |
 | ʒ | Z | ZH sound | 0.07% | pleasure/pleʒər/pleZur/ | vision/vɪʒən/viZun/ | measure/meʒər/meZur/ |
 
 ---
@@ -129,7 +129,7 @@ This **phonemic approach** makes kfa practical across regional variations while 
 
 **Core vowels (8):** u, i, y, a, O, e, o, U  
 **Diphthong combinations (10):** ay, uy, uO, aO, ir, er, ur, oy  
-**All consonants (24):** Complete mapping using intuitive letter assignments
+**All consonants (24):** Complete mapping using intuitive letter assignments (including 'ng' for NG sound)
 
 The kfa system elegantly represents complex sounds as logical combinations of core vowels, making it both practical and intuitive for English speakers.
 
@@ -147,7 +147,7 @@ Punctuation and capitalization follow standard English conventions, making kfa t
 
 The following standard QWERTY letters remain unused in the kfa system, providing room for future expansion or dialect variations:
 
-**Uppercase unused (17):** B, C, D, E, F, H, I, K, L, M, N, P, Q, R, V, W, X, Y  
+**Uppercase unused (18):** B, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, V, W, X, Y  
 **Lowercase unused (2):** q, x
 
 These unused characters could potentially be allocated for:
@@ -181,7 +181,7 @@ This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa syste
 > "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
 
 **kfa:**
-> "wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyG tO dinur."
+> "wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyng tO dinur."
 
 This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
 - **which/witch** = both `wic` (identical pronunciation, identical spelling)
