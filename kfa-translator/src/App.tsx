@@ -280,18 +280,40 @@ The kfa system represents how words actually sound, not their historical spellin
               {/* English Section */}
               <Card>
                 <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    English
-                  </Typography>
-                  <TextField
-                    fullWidth
-                    multiline
-                    rows={4}
-                    value={englishText}
-                    onChange={(e) => setEnglishText(e.target.value)}
-                    placeholder="Enter English text here..."
-                    sx={{ mb: 2 }}
-                  />
+                  {enhancedResult ? (
+                    <Box
+                      onClick={(e) => {
+                        // Only switch to edit mode if clicking on the background/text area, not on interactive words
+                        if (e.target === e.currentTarget || !(e.target as HTMLElement)?.closest?.('[role="button"]')) {
+                          setEnhancedResult(null);
+                        }
+                      }}
+                      sx={{ cursor: 'text' }}
+                    >
+                      <EnhancedTranslationDisplay
+                        result={enhancedResult}
+                        format="english"
+                        title="English (click underlined words to change pronunciation, click text to edit)"
+                        onWordPronunciationChange={handleWordPronunciationChange}
+                      />
+                    </Box>
+                  ) : (
+                    <>
+                      <Typography variant="h6" gutterBottom>
+                        English
+                      </Typography>
+                      <TextField
+                        fullWidth
+                        multiline
+                        rows={4}
+                        value={englishText}
+                        onChange={(e) => setEnglishText(e.target.value)}
+                        placeholder="Enter English text here..."
+                        sx={{ mb: 2 }}
+                      />
+                    </>
+                  )}
+                  
                   <Button
                     variant="contained"
                     onClick={handleTranslateFromEnglish}

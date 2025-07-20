@@ -127,6 +127,36 @@ export class DictionaryLoader {
     };
   }
 
+  // Find all English words that share the same pronunciation
+  private findHomophones(targetIpa: string): string[] {
+    const homophones: string[] = [];
+    
+    for (const [word, pronunciations] of Object.entries(this.dictionary)) {
+      for (const entry of pronunciations) {
+        if (entry.ipa === targetIpa) {
+          homophones.push(word);
+          break; // Don't add the same word multiple times
+        }
+      }
+    }
+    
+    return homophones.sort(); // Sort alphabetically for consistent ordering
+  }
+
+  // Helper method to match case style of source word
+  private matchCase(target: string, source: string): string {
+    if (source === source.toUpperCase()) {
+      // All uppercase
+      return target.toUpperCase();
+    } else if (source[0] === source[0].toUpperCase() && source.slice(1) === source.slice(1).toLowerCase()) {
+      // Title case
+      return target[0].toUpperCase() + target.slice(1).toLowerCase();
+    } else {
+      // Keep original case
+      return target;
+    }
+  }
+
   // Enhanced translation that returns detailed pronunciation options
   translateEnglishPhraseToEnhanced(phrase: string): IEnhancedTranslationResult {
     const tokens = tokenizeEnglishText(phrase);
@@ -141,20 +171,43 @@ export class DictionaryLoader {
           // Sort pronunciations by priority (lower number = higher priority)
           const sortedPronunciations = [...pronunciations].sort((a, b) => a.priority - b.priority);
           
+          // For each pronunciation, find homophones and include them as alternative English words
+          const allPronunciationOptions: any[] = [];
+          
+          for (const entry of sortedPronunciations) {
+            const kfaResult = translateIpaToKfa(entry.ipa);
+            const homophones = this.findHomophones(entry.ipa);
+            
+            // Add the original word first
+            allPronunciationOptions.push({
+              english: token.originalCase || token.value,
+              ipa: entry.ipa,
+              kfa: kfaResult.success ? kfaResult.result : `[${entry.ipa}]`,
+              priority: entry.priority,
+              region: entry.region
+            });
+            
+            // Add homophones as alternative pronunciations (with same IPA/kfa but different English)
+            for (const homophone of homophones) {
+              if (homophone.toLowerCase() !== token.value.toLowerCase()) {
+                // Preserve case style of original word when possible
+                const formattedHomophone = this.matchCase(homophone, token.originalCase || token.value);
+                allPronunciationOptions.push({
+                  english: formattedHomophone,
+                  ipa: entry.ipa,
+                  kfa: kfaResult.success ? kfaResult.result : `[${entry.ipa}]`,
+                  priority: entry.priority + 100, // Lower priority for homophones
+                  region: entry.region
+                });
+              }
+            }
+          }
+          
           const wordTranslation: IWordTranslation = {
             originalWord: token.originalCase || token.value,
-            pronunciations: sortedPronunciations.map(entry => {
-              const kfaResult = translateIpaToKfa(entry.ipa);
-              return {
-                english: token.originalCase || token.value,
-                ipa: entry.ipa,
-                kfa: kfaResult.success ? kfaResult.result : `[${entry.ipa}]`,
-                priority: entry.priority,
-                region: entry.region
-              };
-            }),
-            selectedPronunciation: 0, // Default to highest priority (first after sorting)
-            hasMultiplePronunciations: sortedPronunciations.length > 1
+            pronunciations: allPronunciationOptions,
+            selectedPronunciation: 0, // Default to the original word
+            hasMultiplePronunciations: allPronunciationOptions.length > 1
           };
           
           words.push(wordTranslation);

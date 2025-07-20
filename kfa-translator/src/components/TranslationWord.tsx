@@ -24,6 +24,7 @@ export default function TranslationWord({
 
   const handleClick = (event: any) => {
     if (word.hasMultiplePronunciations) {
+      event.stopPropagation(); // Prevent bubbling to parent edit handler
       setAnchorEl(event.currentTarget);
     }
   };
@@ -32,7 +33,8 @@ export default function TranslationWord({
     setAnchorEl(null);
   };
 
-  const handleSelect = (pronunciationIndex: number) => {
+  const handleSelect = (pronunciationIndex: number) => (event: any) => {
+    event.stopPropagation(); // Prevent bubbling to parent edit handler
     onPronunciationChange(pronunciationIndex);
     handleClose();
   };
@@ -75,7 +77,7 @@ export default function TranslationWord({
           {word.pronunciations.map((pronunciation, index) => (
             <MenuItem
               key={index}
-              onClick={() => handleSelect(index)}
+              onClick={handleSelect(index)}
               selected={index === word.selectedPronunciation}
               sx={{ flexDirection: 'column', alignItems: 'stretch' }}
             >
@@ -89,16 +91,25 @@ export default function TranslationWord({
                   color={pronunciation.priority === 1 ? 'primary' : 'default'}
                 />
               </Box>
-              <Box sx={{ display: 'flex', gap: 1, fontSize: '0.75rem' }}>
-                <Typography variant="caption">
-                  IPA: {pronunciation.ipa}
-                </Typography>
-                <Typography variant="caption">
-                  kfa: {pronunciation.kfa}
-                </Typography>
+              <Box sx={{ display: 'flex', gap: 1, fontSize: '0.875rem', flexWrap: 'wrap' }}>
+                {format !== 'english' && (
+                  <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    English: <Box component="span" sx={{ fontWeight: 'bold' }}>{pronunciation.english}</Box>
+                  </Typography>
+                )}
+                {format !== 'ipa' && (
+                  <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    IPA: <Box component="span" sx={{ fontWeight: 'bold' }}>{pronunciation.ipa}</Box>
+                  </Typography>
+                )}
+                {format !== 'kfa' && (
+                  <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
+                    kfa: <Box component="span" sx={{ fontWeight: 'bold' }}>{pronunciation.kfa}</Box>
+                  </Typography>
+                )}
               </Box>
               {pronunciation.region && (
-                <Typography variant="caption" color="text.secondary">
+                <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.8rem' }}>
                   Region: {pronunciation.region}
                 </Typography>
               )}
