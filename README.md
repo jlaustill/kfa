@@ -181,12 +181,12 @@ This iconic opening from Lincoln's Gettysburg Address demonstrates the kfa syste
 > "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
 
 **kfa:**
-> "wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyng tO dinur."
+> "wic wic iz wic? Ter at Ter haOs uOvur Ter! jUr dog ayt jUr dinur, but jUr not Sur hOz dog it waz or hOz kumyng tO dinur."
 
 This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
 - **which/witch** = both `wic` (identical pronunciation, identical spelling)
 - **they're/their/there** = all `Ter` (same sound, same spelling)  
-- **your/you're** = both `yuer` (phonetically identical)
+- **your/you're** = both `jUr` (phonetically identical)
 - **whose/who's** = both `hOz` (eliminates arbitrary apostrophe confusion)
 
 The kfa system represents how words actually sound, not their historical spelling accidents, making it invaluable for language learners and eliminating common English spelling confusion.
