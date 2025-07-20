@@ -215,13 +215,13 @@ kfa prioritizes **meaning-making sound differences** over academic phonetic prec
 | b | b | B sound | 1.80% | book/bUk | table/taybul | job/Job |
 | f | f | F sound | 1.71% | fish/fiS | coffee/kofy | leaf/lyf |
 | h | h | H sound | 1.40% | house/haOs | perhaps/purhaps | hello/heluO |
-| ŋ | G | NG sound | 0.99% | sing/syG | thinking/TyGkyG | long/loG |
+| ŋ | ng | NG sound | 0.99% | sing/syng | thinking/Tyngkyng | long/long |
 | ʃ | S | SH sound | 0.97% | ship/Sip | washing/woSyG | fish/fiS |
 | j | j | Y sound | 0.81% | yes/jes | music/mjOzik | few/fjO |
 | g | g | G sound | 0.80% | go/guO | bigger/bigur | bag/bag |
 | dʒ | J | J sound | 0.59% | jump/Jump | magic/maJik | bridge/briJ |
 | tʃ | c | CH sound | 0.56% | chair/cer | teacher/tycer | watch/woc |
-| θ | T | TH (thin) | 0.41% | think/TyGk | nothing/nuTyG | path/paT |
+| θ | T | TH (thin) | 0.41% | think/Tyngk | nothing/nuTyng | path/paT |
 | ʒ | Z | ZH sound | 0.07% | pleasure/pleZur | vision/viZun | measure/meZur |
 
 ## Complete System Achievement
@@ -246,7 +246,7 @@ kfa prioritizes **meaning-making sound differences** over academic phonetic prec
 "Which witch is which? They're at their house over there! Your dog ate you're dinner, but you're not sure whose dog it was or who's coming to dinner."
 
 **kfa:**
-"wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyG tO dinur."
+"wic wic iz wic? Ter at Ter haOs uOvur Ter! yuer dog ayt yuer dinur, but yuer not Sur hOz dog it waz or hOz kumyng tO dinur."
 
 This example showcases one of kfa's most powerful features: eliminating the confusion caused by English's inconsistent spelling. Notice how:
 - **which/witch** = both 'wic' (identical pronunciation, identical spelling)
